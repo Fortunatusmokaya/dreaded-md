@@ -77,7 +77,7 @@ const appname = process.env.APP_NAME;
 const herokuapi = process.env.HEROKU_API;
     const packname = process.env.STICKER_PACKNAME || 'dreaded';
 const antibot = process.env.ANTIBOT || 'FALSE';
-const dev = process.env.DEV || '254114018036'
+const dev = process.env.DEV || '254114018035'
  const DevDreaded = dev.split(",");
     const badwordkick = process.env.BAD_WORD_KICK || 'FALSE';
    const bad = process.env.BAD_WORD || 'fuck';
@@ -253,10 +253,7 @@ if (stdout) return reply(stdout)
   } 
 
 
-if (budy.match(`@+254114018035`)) {
-client.sendMessage(from, reactionMessage)
-reply("");
-}
+
 
 
 
@@ -359,8 +356,9 @@ let dreadrecordin = ['recording','composing']
        }   
 
 if (cmd && mode === 'PRIVATE' && !itsMe && !Owner) {
-return;
+return await client.sendMessage(from, reactionMessage)
 }
+
 
     if (cmd && !m.isGroup) {
       console.log(chalk.black(chalk.bgWhite("[ DREADED-MD ]")), color(argsLog, "turquoise"), chalk.magenta("From"), chalk.green(pushname), chalk.yellow(`[ ${m.sender.replace("@s.whatsapp.net", "")} ]`));

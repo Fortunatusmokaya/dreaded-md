@@ -21,13 +21,12 @@ import chalk from "chalk";
 import { bardAI, bardAsk } from 'g-bardai';
 import speed from "performance-now";
 import Genius from "genius-lyrics";
-import { ssweb } from './lib/scrap.js'; // Assuming scrap is a CommonJS module
-import { readFileSync } from 'fs'; // Update to use specific function from fs
+import { ssweb } from './lib/scrap.js'; 
+import { readFileSync } from 'fs'; 
 const kali = readFileSync('./dreaded.jpg'); // Using readFileSync directly
-import { Client } from "genius-lyrics"; // Assuming Client is a named export
+import { Client } from "genius-lyrics"; 
 import { isUrl, processTime } from "./lib/dreadfunc.js";
 import { TelegraPh, UploadFileUgu } from './lib/dreadupload.js';
-// import { tiny, listall } from './lib/style.js';
 import { smsg, formatp, tanggal, formatDate, getTime, sleep, clockString, fetchJson, getBuffer, jsonformat, generateProfilePicture, parseMention, getRandom } from './lib/dreadfunc.js';
 import { exec, spawn, execSync } from "child_process";
 import Heroku from "heroku-client";
@@ -98,7 +97,7 @@ const isBaileys = mek.key.id.startsWith("BAE5") && mek.key.id.length === 16;
 
 const reactionMessage = {
     react: {
-        text: "🗿", // use an empty string to remove the reaction
+        text: "❌", 
         key: m.key
     }
 }
@@ -153,10 +152,10 @@ return client.sendMessage(from, { text: text, contextInfo:{"externalAdReply": {"
 const appname = process.env.APP_NAME;
 const herokuapi = process.env.HEROKU_API;
     const packname = process.env.STICKER_PACKNAME || 'dreaded';
-const antibot = process.env.ANTIBOT || 'TRUE';
+const antibot = process.env.ANTIBOT || 'FALSE';
 const dev = process.env.DEV || '254114018035, 17199664731'
  const DevDreaded = dev.split(",");
-    const badwordkick = process.env.BAD_WORD_KICK || 'TRUE';
+    const badwordkick = process.env.BAD_WORD_KICK || 'FALSE';
    const bad = process.env.BAD_WORD || 'fuck,mbwa,mamako,malaya,kuma,dinywa,jidinye,kumamako,kumamake,matako,mboro,coward,bastard, shenzi,idiot,cowards,nyani,jinga,ujinga,nitakudinya,dick,pussy,vagina,penis,sex,doggy,anal,blowjob,handjob,porn,porno, pornography,bdsm,cock,ngwati';
     const autoreadrecord = process.env.AUTOREAD_AND_TYPE || 'TRUE';
     const badword = bad.split(",");
@@ -169,7 +168,7 @@ const groupName = m.isGroup && groupMetadata ? await groupMetadata.subject : "";
      const isBotAdmin = m.isGroup ? groupAdmin.includes(botNumber) : false; 
      const isAdmin = m.isGroup ? groupAdmin.includes(m.sender) : false;
 const admin = process.env.ADMIN_MSG || 'Are you an admin?';
-    const group = process.env.GROUP_ONLY_MSG || 'Is this a group chat?';
+    const group = process.env.GROUP_ONLY_MSG || 'This a not a group chat';
     const botAdmin = process.env.BOT_ADMIN_MSG || 'Am I an admin?'
     const NotOwner = process.env.NOT_OWNER_MSG || 'Are you the owner?';
 
@@ -257,17 +256,17 @@ reply("");
 
 
 
-    // Push Message To Console
+    // Pushing Message To Console
     let argsLog = budy.length > 30 ? `${q.substring(0, 30)}...` : budy;
 
-/*
+
     if (autoreadrecord === 'TRUE' && !m.isGroup) { 
              client.readMessages([m.key]); 
 client.sendPresenceUpdate('unavailable', from)
         
   client.sendPresenceUpdate('composing', m.chat);
     }
-*/
+
 
 
 if (m.chat.endsWith("@s.whatsapp.net") && body && (new RegExp('\\b' + badword.join('\\b|\\b') + '\\b')).test(body.toLowerCase())) {
@@ -282,120 +281,23 @@ await client.updateBlockStatus(sender, 'block');
 
 
 
-
-
-    if (m.chat.endsWith("@s.whatsapp.net") && !m.isBaileys) {
-
-try {
-
-if (itsMe) return;
-
-const rsnchat = new RsnChat("chatgpt_z8DWXIDQxd6Wczj1FW7qjy");
-
-rsnchat.gpt(text).then((response) => { sendd(response.message); });
-
-} catch (error) {
-
-m.reply("something has gone fatally wrong, I don't know, you try later. . . 🥲")
-
-}
-
-}
-
-
-
-
-
-
-
-
-
-
-
-/*
-try {
-let cookies = `__Secure-1PSID=fghhiycqyQzlhpnKjcfvTxwarl4SEYcWIHTMyhegK1y_vQVKwCgGxwmIcyXahD_Ah5TPwA.`; 
-
-let bot = new Bard(cookies, {
-    inMemory: false,
-    savePath: "./conversation.json", 
-});
-
-let conversationId = m.sender; 
-
-let respond = await bot.ask(text, conversationId);  m.reply(respond)
-
-} catch (error) {
-m.reply("hey, for better responses make longer sentence, do not send short messages like hey, hi, hello")
-
-}
-}
-
-
-(async()=>{
-
-
-
-
-let sessionCokies = JSON.parse(fs.readFileSync('lib/bardLogin.json'))
-
-
-await new bardAI(sessionCokies).login()
-
-//After login you can use bardAsk() function
-
-
-
-
-
-const res = await bardAsk(text)
-
-m.reply(res);
-
-console.log(res)
-})()
-
-} catch (error) {
-
-m.reply("🤔 Hmmm. . . ")
-
-}
-
-          }
-
-  
-*/
-
-
-
 if (badwordkick === 'TRUE' && m.isGroup && isBotAdmin && body && (new RegExp('\\b' + badword.join('\\b|\\b') + '\\b')).test(body.toLowerCase())) {
 
-// on = m.sender;
+
 
       if (isAdmin) return m.reply("👀");      
      client.groupParticipantsUpdate(from, [sender], 'remove')
 
 
-await sendd("Removed:\n\nthis is not allowed");
+await sendd("Removed:\n\nThis is not allowed");
 
 
 
                                                    }
 
-
-/*
-
-if (mek.key.id.length === 16 && mek.key.id.startsWith("BAE5") && m.isGroup && !isAdmin && isBotAdmin && m.mentionedJid.length > 10) {
-
-client.groupParticipantsUpdate(from, [sender], 'remove')
-con = m.sender;
-client.sendMessage(m.chat, {text:`ANTITAG:\n\nRemoved by Dreaded:\n\n@${con.split("@")[0]}, Do not tag group members using bot!`, contextInfo:{mentionedJid:[con]}}, {quoted:m}); 
-
-}
-
-*/
 if (m.isGroup && m.mentionedJid && m.mentionedJid.length > 10) {
- if (!isBotAdmin) return m.reply("Antitag:  Bot not admin")
+if (itsMe) return;
+ if (!isBotAdmin) return m.reply("Antitag:  Bot is not admin")
  if (isAdmin) return m.reply("Antitag:  User is admin")
 
 try {
@@ -418,11 +320,9 @@ sendd("Do not tag!")
 
 
 
-if (autobio === 'TRUE'){
-client.updateProfileStatus(`Dreaded Bot is active!`).catch(_ => _)
-        }
 
-/* if (m.isGroup){
+
+if (m.isGroup && ){
 
 let dreadrecordin = ['recording','composing']
 
@@ -432,7 +332,7 @@ let dreadrecordin = ['recording','composing']
 }
 
 
-*/
+
 
 
 
@@ -453,18 +353,8 @@ let dreadrecordin = ['recording','composing']
        }   
 
 
-
-
-
-
-
-
-
-
-
-
     if (cmd && !m.isGroup) {
-      console.log(chalk.black(chalk.bgWhite("[ DREADED-AI ]")), color(argsLog, "turquoise"), chalk.magenta("From"), chalk.green(pushname), chalk.yellow(`[ ${m.sender.replace("@s.whatsapp.net", "")} ]`));
+      console.log(chalk.black(chalk.bgWhite("[ DREADED-MD ]")), color(argsLog, "turquoise"), chalk.magenta("From"), chalk.green(pushname), chalk.yellow(`[ ${m.sender.replace("@s.whatsapp.net", "")} ]`));
     } else if (cmd && m.isGroup) {
       console.log(
         chalk.black(chalk.bgWhite("[ LOGS ]")),
@@ -476,19 +366,7 @@ let dreadrecordin = ['recording','composing']
         chalk.green(groupName)
       );
     }
-/*
 
-const commands = {}
-const loadCommands = (category) => {
-  const commandFiles = fs.readdirSync(`./commands/${category}`).filter((file) => file.endsWith(".js"));
-
-  commandFiles.forEach((file) => {
-    const command = require(`./commands/${category}/${file}`);
-   
-    commands[file.replace(".js", "")] = command;
-  });
-};
-*/
 
 
 const commands = {};
@@ -501,11 +379,6 @@ const loadCommands = async (category) => {
     commands[file.slice(0, -3)] = command;
   }
 };
-
-// Make sure to call loadCommands inside an async function or use .then() with the promise it returns.
-
-
-
 
 
     if (cmd) {
@@ -524,7 +397,7 @@ await loadCommands("download");
 await loadCommands("edit");
 console.log("Loaded commands successfully");
       switch (command) {
-// Group commands
+// Group
 
 
 case "close": commands[command](client, m, getGroupAdmins, admin, group, botAdmin,isAdmin, isBotAdmin);
@@ -606,13 +479,6 @@ break;
 case "groups":
 commands[command](client, m, sendd);
 break;
-
-case "tempmail":
-commands[command](client, m, text);
-break;
-case "tempinbox":
-commands[command](client, m, text);
-break;
 case "script":
 commands[command](client, m, sendd);
 break;
@@ -639,47 +505,14 @@ break;
 case "gpt":
 commands[command](client, m, text);
 break;
-case "gemini":
-commands[command](client, m, text);
-break;
-case "ai2":
-commands[command](client, m, text, qmsg, mime, UploadFileUgu, TelegraPh);
-case "hi":
-commands[command](client, m, text, qmsg, mime, UploadFileUgu, TelegraPh);
-break;
-case "ai6":
-commands[command](client, m, text);
-break;
-case "ai3":
-commands[command](client, m, text);
-break;
-case "ai4":
-commands[command](client, m, text, fetchJson);
-break;
 
 case "gpt4":
 commands[command](client, m, text, sendd, fetchJson);
 break;
 
-case "speak":
-commands[command](client, m, text);
-break;
-case "ai5":
-commands[command](client, m, text);
-break;
-
-case "bot":
-commands[command](client, m, text);
-break;
-
 case "gpt":
 commands[command](client, m, text, sendd);
 break;
-
-case "boy":
-commands[command](client, m, text, sendd);
-break;
-
 
 
 // download
@@ -688,15 +521,6 @@ commands[command](client, m, text);
 break;
 case "lyrics":
 commands[command](client, m, text, Client, Genius);
-break;
-case "video":
-commands[command](client, m, text);
-break;
-case "spotify":
-commands[command](client, m, q, fetchJson);
-break;
-case "apk":
-commands[command](client, m, q, fetchJson);
 break;
 case "upload":
 commands[command](client, m, qmsg, mime, UploadFileUgu, TelegraPh);
@@ -764,13 +588,7 @@ break
 case "kill":
 commands[command](client, m, Owner, NotOwner, group, botAdmin, isBotAdmin, participants);
 break
-case "pair":
-commands[command](client, m, Owner, NotOwner, smsg);
-break
 
-case "bug":
-commands[command](client, m, Owner, NotOwner, text4, generateWAMessageFromContent);
-break
 
 case "bc":
 commands[command](client, m, text, Owner, NotOwner, participants, pushname);

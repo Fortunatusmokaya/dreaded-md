@@ -16,7 +16,6 @@ import fs from "fs";
 import util from "util";
 import { Bard } from "googlebard"; 
 import axios from "axios";
-import text4 from "./lib/text4.js";
 import chalk from "chalk";
 import { bardAI, bardAsk } from 'g-bardai';
 import speed from "performance-now";

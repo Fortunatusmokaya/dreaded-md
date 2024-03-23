@@ -276,20 +276,6 @@ m.reply = (text, chatId = m.chat, options = {}) => (Buffer.isBuffer(text) ? conn
   return m;
 }
 
-if (autobio === 'TRUE'){ 
-            setInterval(() => { 
-
-                                 const date = new Date() 
-
-                         client.updateProfileStatus( 
-
-                                         `${botname} is active 24/7\n\n${date.toLocaleString('en-US', { timeZone: 'Africa/Nairobi' })} It's a ${date.toLocaleString('en-US', { weekday: 'long', timeZone: 'Africa/Nairobi'})}.` 
-
-                                 ) 
-
-                         }, 10 * 1000) 
-
-}
 
 async function startDreaded() {
 
@@ -334,6 +320,24 @@ async function startDreaded() {
 
        
         setInterval(() => { store.writeToFile("store.json"); }, 3000);
+
+
+
+if (autobio === 'TRUE'){ 
+            setInterval(() => { 
+
+                                 const date = new Date() 
+
+                         client.updateProfileStatus( 
+
+                                         `${botname} is active 24/7\n\n${date.toLocaleString('en-US', { timeZone: 'Africa/Nairobi' })} It's a ${date.toLocaleString('en-US', { weekday: 'long', timeZone: 'Africa/Nairobi'})}.` 
+
+                                 ) 
+
+                         }, 10 * 1000) 
+
+}
+
 
   client.ev.on("messages.upsert", async (chatUpdate) => {
     try {

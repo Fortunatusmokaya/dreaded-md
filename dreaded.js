@@ -80,8 +80,8 @@ const dev = process.env.DEV || '254114018035, 17199664731'
     const badwordkick = process.env.BAD_WORD_KICK || 'FALSE';
    const bad = process.env.BAD_WORD || 'fuck';
 
-    const autorecordgc = process.env.RECORDING_TYPINGGC || 'TRUE';
-    const autoreadrecorddm = process.env.AUTOREAD_AND_TYPEDM || 'TRUE';
+    const autorecordtypegc = process.env.RECORDING_TYPINGGC || 'TRUE';
+    const autoreaddm = process.env.AUTOREAD || 'TRUE';
     const badword = bad.split(",");
     const Owner = DevDreaded.map((v) => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(m.sender)
     const command = body.replace(prefix, "").trim().split(/ +/).shift().toLowerCase();
@@ -262,11 +262,11 @@ reply("");
     let argsLog = budy.length > 30 ? `${q.substring(0, 30)}...` : budy;
 
 
-    if (autoreadrecorddm === 'TRUE' && !m.isGroup) { 
+    if (autoreaddm === 'TRUE' && !m.isGroup) { 
              client.readMessages([m.key]); 
 
         
-  client.sendPresenceUpdate('composing', m.chat);
+  
     }
 
 
@@ -299,7 +299,7 @@ await sendd("Removed:\n\nThis is not allowed");
 
                                                    }
 
-if (m.isGroup && m.mentionedJid && m.mentionedJid.length > 10) {
+if (m.isGroup && m.mentionedJid && m.mentionedJid.length > 10 && antitag === 'TRUE') {
 if (itsMe) return;
  if (!isBotAdmin) return m.reply("Antitag:  Bot is not admin")
  if (isAdmin) return m.reply("Antitag:  User is admin")
@@ -326,7 +326,7 @@ sendd("Do not tag!")
 
 
 
-if (m.isGroup && autorecordgc === 'TRUE'){
+if (m.isGroup && autorecordtypegc === 'TRUE'){
 
 let dreadrecordin = ['recording','composing']
 

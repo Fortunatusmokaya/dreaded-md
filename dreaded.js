@@ -470,6 +470,10 @@ break
         break;
 
 // general commands
+case "credits":
+commands[command](client, m);
+break;
+
 case "menu":
 commands[command](client, m, menureply);
 break;

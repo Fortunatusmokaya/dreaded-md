@@ -184,9 +184,7 @@ function smsg(conn, m, store) {
 m.reply = (text, chatId = m.chat, options = {}) => (Buffer.isBuffer(text) ? conn.sendMedia(chatId, text, "file", "", m, { ...options }) : conn.sendText(chatId, text, m, { ...options }));
 
 
-/*.reply = (text) => { 
- return conn.sendMessage(from, { text: text, contextInfo:{"externalAdReply": {"title": `DREADED BOT`,"body": `Hi ${m.pushName}`, "previewType": "PHOTO","thumbnailUrl": 'https://telegra.ph/file/c75efecf7f0aef851fc02.jpg',"thumbnail": kali,"sourceUrl": `https://github.com/Fortunatusmokaya/DREADED-GPT-AI`}}}, { quoted:m})} 
-*/
+
 
   /**
    * Copy this message
@@ -206,23 +204,13 @@ m.reply = (text, chatId = m.chat, options = {}) => (Buffer.isBuffer(text) ? conn
 }
 async function startDreaded() {
 
-console.log(
-    color(
-      figlet.textSync("DREADED-MD", {
-        font: "Standard",
-        horizontalLayout: "default",
-        vertivalLayout: "default",
-        whitespaceBreak: false,
-      }),
-      "green"
-    )
-  );
+
 
         const { state, saveCreds } = await (0, pk.useMultiFileAuthState)("session");
                const sockOptions = {
            
             logger: pino({ level: "silent" }),
-            browser: ['Md', "safari", "1.0.0"],
+            browser: ['DREADED-MD', "safari", "1.0.0"],
             printQRInTerminal: true,
             fireInitQueries: false,
             shouldSyncHistoryMessage: true,

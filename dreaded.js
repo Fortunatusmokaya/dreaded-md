@@ -82,8 +82,7 @@ const dev = process.env.DEV || '254114018035, 17199664731'
    const bad = process.env.BAD_WORD || 'fuck';
 
     const autorecordgc = process.env.RECORDING_TYPINGGC || 'TRUE';
-    const badword
-    const autoreadrecorddm = process.env.AUTOREAD_AND_TYPE || 'TRUE';
+    const autoreadrecorddm = process.env.AUTOREAD_AND_TYPEDM || 'TRUE';
     const badword = bad.split(",");
     const Owner = DevDreaded.map((v) => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(m.sender)
     const command = body.replace(prefix, "").trim().split(/ +/).shift().toLowerCase();

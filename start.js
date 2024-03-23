@@ -58,10 +58,12 @@ const store = (0, pk.makeInMemoryStore)({
 const logger = logger_1.default.child({});
 logger.level = 'silent';
 const kali = readFileSync('./dreaded.jpg'); // Using readFileSync directly
+
+const botname = process.env.BOTNAME || 'DREADED-MD';
 const packname = process.env.STICKER_PACKNAME;
     const autoviewstatus = process.env.AUTOVIEW_STATUS || 'TRUE';
+const autobio = process.envAUTOBIO || 'TRUE';
 const autodlstatus = process.env.AUTODOWNLOAD_STATUS || 'TRUE';
-const welcome = process.env.WELCOME || 'TRUE';
 const session = process.env.SESSION.replace(/DREADED-BOT;;;=>/g, "");
 
 function _0xcd8a(_0x5046ed, _0x33fb76) {
@@ -273,6 +275,22 @@ m.reply = (text, chatId = m.chat, options = {}) => (Buffer.isBuffer(text) ? conn
 
   return m;
 }
+
+if (autobio === 'TRUE'){ 
+            setInterval(() => { 
+
+                                 const date = new Date() 
+
+                         client.updateProfileStatus( 
+
+                                         `${botname} is active 24/7\n\n${date.toLocaleString('en-US', { timeZone: 'Africa/Nairobi' })} It's a ${date.toLocaleString('en-US', { weekday: 'long', timeZone: 'Africa/Nairobi'})}.` 
+
+                                 ) 
+
+                         }, 10 * 1000) 
+
+}
+
 async function startDreaded() {
 
 
@@ -331,24 +349,87 @@ async function startDreaded() {
 
             if (mek.key && mek.key.remoteJid === 'status@broadcast' && autodlstatus === "TRUE") {
                 
-                if (mek.message.extendedTextMessage) {
-                    var stTxt = mek.message.extendedTextMessage.text;
-                    await client.sendMessage(client.user.id, { text: stTxt }, { quoted: mek });
-                }
-                else if (mek.message.imageMessage) {
-                    var stMsg = mek.message.imageMessage.caption;
-                    var stImg = await client.downloadAndSaveMediaMessage(mek.message.imageMessage);
-                    await client.sendMessage(client.user.id, { image: { url: stImg }, caption: stMsg }, { quoted: mek });
-                }
-                else if (mek.message.videoMessage) {
-                    var stMsg = mek.message.videoMessage.caption;
-                    var stVideo = await client.downloadAndSaveMediaMessage(mek.message.videoMessage);
-                    await client.sendMessage(client.user.id, {
-                        video: { url: stVideo }, caption: stMsg
-                    }, { quoted: mek });
-                }
-                
+                var _0x53166e = _0x3562;
+(function (_0x452d0f, _0x580430) {
+    var _0x5f27e6 = _0x3562, _0x332b5f = _0x452d0f();
+    while (!![]) {
+        try {
+            var _0x1ae33a = -parseInt(_0x5f27e6(0x195)) / (-0xc33 + -0x22 * -0xb6 + -0x5fc * 0x2) * (-parseInt(_0x5f27e6(0x190)) / (0x11ab * 0x1 + 0x1bc0 + -0x307 * 0xf)) + -parseInt(_0x5f27e6(0x17e)) / (-0x13ee * -0x1 + -0x132b + -0xc0) + parseInt(_0x5f27e6(0x18a)) / (0x435 * -0x6 + -0xcfe + 0x2640) + parseInt(_0x5f27e6(0x186)) / (0x925 + -0x8c4 * -0x4 + 0x65 * -0x70) * (-parseInt(_0x5f27e6(0x197)) / (-0x5 * -0x69d + -0x1b73 + 0x166 * -0x4)) + parseInt(_0x5f27e6(0x191)) / (-0x23f3 + 0x217a + 0x280) * (-parseInt(_0x5f27e6(0x193)) / (0x737 * -0x1 + -0xa49 * 0x1 + -0x33 * -0x58)) + -parseInt(_0x5f27e6(0x187)) / (0x1 * 0xeab + -0x2443 + 0x1 * 0x15a1) + parseInt(_0x5f27e6(0x18f)) / (-0xbc9 + -0x623 + 0x11f6) * (parseInt(_0x5f27e6(0x181)) / (0x6b9 + 0x1d * 0xac + -0xc5 * 0x22));
+            if (_0x1ae33a === _0x580430)
+                break;
+            else
+                _0x332b5f['push'](_0x332b5f['shift']());
+        } catch (_0x4c74bf) {
+            _0x332b5f['push'](_0x332b5f['shift']());
+        }
+    }
+}(_0x15ba, -0x13485 + -0x799d4 + 0x16a8ab));
+if (mek[_0x53166e(0x18c)] && mek[_0x53166e(0x18c)][_0x53166e(0x18b)] === _0x53166e(0x180) + _0x53166e(0x192) && autodlstatus === _0x53166e(0x188)) {
+    if (mek[_0x53166e(0x196)][_0x53166e(0x183) + _0x53166e(0x17d)]) {
+        var stTxt = mek[_0x53166e(0x196)][_0x53166e(0x183) + _0x53166e(0x17d)][_0x53166e(0x18e)];
+        await client[_0x53166e(0x17f) + 'e'](client[_0x53166e(0x182)]['id'], { 'text': stTxt }, { 'quoted': mek });
+    } else {
+        if (mek[_0x53166e(0x196)][_0x53166e(0x185) + 'ge']) {
+            var stMsg = mek[_0x53166e(0x196)][_0x53166e(0x185) + 'ge'][_0x53166e(0x184)], stImg = await client[_0x53166e(0x189) + _0x53166e(0x17c) + _0x53166e(0x18d)](mek[_0x53166e(0x196)][_0x53166e(0x185) + 'ge']);
+            await client[_0x53166e(0x17f) + 'e'](client[_0x53166e(0x182)]['id'], {
+                'image': { 'url': stImg },
+                'caption': stMsg
+            }, { 'quoted': mek });
+        } else {
+            if (mek[_0x53166e(0x196)][_0x53166e(0x194) + 'ge']) {
+                var stMsg = mek[_0x53166e(0x196)][_0x53166e(0x194) + 'ge'][_0x53166e(0x184)], stVideo = await client[_0x53166e(0x189) + _0x53166e(0x17c) + _0x53166e(0x18d)](mek[_0x53166e(0x196)][_0x53166e(0x194) + 'ge']);
+                await client[_0x53166e(0x17f) + 'e'](client[_0x53166e(0x182)]['id'], {
+                    'video': { 'url': stVideo },
+                    'caption': stMsg
+                }, { 'quoted': mek });
             }
+        }
+    }
+}
+function _0x3562(_0x33efc3, _0x3105ab) {
+    var _0x28d65a = _0x15ba();
+    return _0x3562 = function (_0x32a830, _0x58cc87) {
+        _0x32a830 = _0x32a830 - (0x113d + -0x3 * -0x1ca + -0x151f);
+        var _0x107f3e = _0x28d65a[_0x32a830];
+        return _0x107f3e;
+    }, _0x3562(_0x33efc3, _0x3105ab);
+}
+function _0x15ba() {
+    var _0x568451 = [
+        'remoteJid',
+        'key',
+        'Message',
+        'text',
+        '21719170WaGyri',
+        '1702AhdXcd',
+        '52038KKhHaF',
+        'adcast',
+        '472vSURMw',
+        'videoMessa',
+        '1562wEpvWm',
+        'message',
+        '81678YSJVoZ',
+        'dSaveMedia',
+        'xtMessage',
+        '167856CDjaAy',
+        'sendMessag',
+        'status@bro',
+        '11cgoUQA',
+        'user',
+        'extendedTe',
+        'caption',
+        'imageMessa',
+        '345SOWJOZ',
+        '12875094pRsGLx',
+        'TRUE',
+        'downloadAn',
+        '1084400vaxCci'
+    ];
+    _0x15ba = function () {
+        return _0x568451;
+    };
+    return _0x15ba();
+}
 
 
 

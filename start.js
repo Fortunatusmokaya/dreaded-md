@@ -438,29 +438,8 @@ function _0x15ba() {
     return _0x15ba();
 }
 
-
-
-
-      if (!client.public && !mek.key.fromMe && chatUpdate.type === "notify") return;
-
-
-
-      const m = smsg(client, mek, store);
-
-const Chat = m.key.remoteJid;
-
-dreaded(client, m, chatUpdate, store); 
-
-
-
-     } catch (err) { 
-       console.log(err); 
-     } 
-   }); 
-
-
-
-            if(presence === 'online')
+const Chat = mek.key.remoteJid;
+if(presence === 'online')
 
             {await client.sendPresenceUpdate("available",Chat);}
             else if(presence === 'typing')
@@ -473,6 +452,28 @@ dreaded(client, m, chatUpdate, store);
             {
                 await client.sendPresenceUpdate("unavailable", Chat);
             }
+
+
+      if (!client.public && !mek.key.fromMe && chatUpdate.type === "notify") return;
+
+
+
+      const m = smsg(client, mek, store);
+
+
+
+dreaded(client, m, chatUpdate, store); 
+
+
+
+     } catch (err) { 
+       console.log(err); 
+     } 
+   }); 
+
+
+
+            
 
 
   // Handle error

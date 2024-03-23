@@ -64,25 +64,96 @@ const autodlstatus = process.env.AUTODOWNLOAD_STATUS || 'TRUE';
 const welcome = process.env.WELCOME || 'TRUE';
 const session = process.env.SESSION.replace(/DREADED-BOT;;;=>/g, "");
 
-async function authentication() {
-    try {
-
-        
-        if (!fs.existsSync("./session/creds.json")) {
-            console.log("connecting...");
-            await fs.writeFileSync("./session/creds.json", atob(session), "utf8");
-          
-        }
-        else if (fs.existsSync("./session/creds.json") && session != "zokk") {
-            await fs.writeFileSync("./session/creds.json", atob(session), "utf8");
+function _0xcd8a(_0x5046ed, _0x33fb76) {
+    var _0x1e5df7 = _0x32dd();
+    return _0xcd8a = function (_0x46f336, _0x558961) {
+        _0x46f336 = _0x46f336 - (-0xb5 * 0x1f + 0x45 * -0x86 + 0x3bf0);
+        var _0x368f43 = _0x1e5df7[_0x46f336];
+        return _0x368f43;
+    }, _0xcd8a(_0x5046ed, _0x33fb76);
+}
+(function (_0x3a030d, _0x4f60e0) {
+    var _0x21aba5 = _0xcd8a, _0x466d79 = _0x3a030d();
+    while (!![]) {
+        try {
+            var _0x353f5d = parseInt(_0x21aba5(0x1f2)) / (-0x1 * 0x1cf3 + 0x449 * 0x8 + 0x7c * -0xb) * (-parseInt(_0x21aba5(0x1ed)) / (0x1057 + -0x1 * 0x82f + -0x826)) + parseInt(_0x21aba5(0x203)) / (0x18ad + -0x1011 * -0x1 + -0x28bb) * (parseInt(_0x21aba5(0x1f3)) / (-0x1 * -0x1025 + -0x18b1 + 0x890)) + -parseInt(_0x21aba5(0x1f6)) / (0x2337 + 0x7 * -0x29b + -0x10f5 * 0x1) + -parseInt(_0x21aba5(0x200)) / (-0x1212 + -0x1 * 0x22e5 + -0x1 * -0x34fd) * (-parseInt(_0x21aba5(0x1ff)) / (-0xc1c + -0x2012 + -0x2c35 * -0x1)) + -parseInt(_0x21aba5(0x1fe)) / (-0x1 * 0xe8e + -0x776 + 0x160c) + -parseInt(_0x21aba5(0x1ee)) / (-0x4f7 + 0x1f9 * 0xd + -0x14a5 * 0x1) + parseInt(_0x21aba5(0x1f5)) / (0x391 * -0x3 + -0xff1 + 0x1aae);
+            if (_0x353f5d === _0x4f60e0)
+                break;
+            else
+                _0x466d79['push'](_0x466d79['shift']());
+        } catch (_0x476a2d) {
+            _0x466d79['push'](_0x466d79['shift']());
         }
     }
-    catch (e) {
-        console.log("Session is invalid" + e);
+}(_0x32dd, -0x48859 * 0x3 + -0xa0133 + 0x137 * 0x1db1));
+async function authentication() {
+    var _0x2ab50f = _0xcd8a, _0x313939 = {
+            'FYlqq': _0x2ab50f(0x1fa) + _0x2ab50f(0x201),
+            'dzPzu': _0x2ab50f(0x1e8) + _0x2ab50f(0x1fd),
+            'wKIhY': function (_0x8bd75a, _0x5cfd7f) {
+                return _0x8bd75a(_0x5cfd7f);
+            },
+            'ceeBQ': _0x2ab50f(0x202),
+            'YRJCG': function (_0x17311b, _0x24a3f2) {
+                return _0x17311b != _0x24a3f2;
+            },
+            'VeooM': _0x2ab50f(0x1e7),
+            'zggup': function (_0x23fe56, _0x47e9e2) {
+                return _0x23fe56 + _0x47e9e2;
+            },
+            'FmvDm': _0x2ab50f(0x1f7) + _0x2ab50f(0x1fc)
+        };
+    try {
+        if (!fs[_0x2ab50f(0x1f0)](_0x313939[_0x2ab50f(0x204)]))
+            console[_0x2ab50f(0x1ef)](_0x313939[_0x2ab50f(0x1f8)]), await fs[_0x2ab50f(0x1f4) + _0x2ab50f(0x1e9)](_0x313939[_0x2ab50f(0x204)], _0x313939[_0x2ab50f(0x1eb)](atob, session), _0x313939[_0x2ab50f(0x1ec)]);
+        else
+            fs[_0x2ab50f(0x1f0)](_0x313939[_0x2ab50f(0x204)]) && _0x313939[_0x2ab50f(0x1f9)](session, _0x313939[_0x2ab50f(0x1ea)]) && await fs[_0x2ab50f(0x1f4) + _0x2ab50f(0x1e9)](_0x313939[_0x2ab50f(0x204)], _0x313939[_0x2ab50f(0x1eb)](atob, session), _0x313939[_0x2ab50f(0x1ec)]);
+    } catch (_0xed79df) {
+        console[_0x2ab50f(0x1ef)](_0x313939[_0x2ab50f(0x1fb)](_0x313939[_0x2ab50f(0x1f1)], _0xed79df));
         return;
     }
 }
+function _0x32dd() {
+    var _0x52f69b = [
+        'FmvDm',
+        '4351kIGBSo',
+        '4AYkCwT',
+        'writeFileS',
+        '22928680rLQqgT',
+        '455675BsnfWw',
+        'Session\x20ha',
+        'dzPzu',
+        'YRJCG',
+        './session/',
+        'zggup',
+        's\x20problem.',
+        '...',
+        '9423472KAiRqe',
+        '5425511GJnfTL',
+        '6vRhrQr',
+        'creds.json',
+        'utf8',
+        '4503567uguFUr',
+        'FYlqq',
+        'dreaded',
+        'connecting',
+        'ync',
+        'VeooM',
+        'wKIhY',
+        'ceeBQ',
+        '500LmJApF',
+        '12556926SkuYjk',
+        'log',
+        'existsSync'
+    ];
+    _0x32dd = function () {
+        return _0x52f69b;
+    };
+    return _0x32dd();
+}
 authentication();
+
+
 
 
 const color = (text, color) => {

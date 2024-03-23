@@ -358,7 +358,7 @@ let dreadrecordin = ['recording','composing']
        }   
 
 if (cmd && mode === 'PRIVATE' && !itsMe && !Owner) {
-return await client.sendMessage(from, reactionMessage)
+return;
 }
 
 

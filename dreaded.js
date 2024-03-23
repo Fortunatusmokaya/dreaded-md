@@ -64,10 +64,28 @@ export default async function dreaded(client, m, chatUpdate, store) {
         : "";
     var budy = typeof m.text == "string" ? m.text : "";
    // leave the prefix string empty if you don't want the bot to use a prefix
+const author = process.env.STICKER_AUTHOR || 'fortunatus';
     const prefix = process.env.PREFIX || '';
 const mycode = process.env.COUNTRY_CODE || '254';
     const cmd = body.startsWith(prefix);
-const autobio = process.env.AUTOBIO || 'TRUE';
+const admin = process.env.ADMIN_MSG || 'Are you an admin?';
+    const group = process.env.GROUP_ONLY_MSG || 'This a not a group chat';
+    const botAdmin = process.env.BOT_ADMIN_MSG || 'Am I an admin?'
+    const NotOwner = process.env.NOT_OWNER_MSG || 'Are you the owner?';
+const appname = process.env.APP_NAME;
+const herokuapi = process.env.HEROKU_API;
+    const packname = process.env.STICKER_PACKNAME || 'dreaded';
+const antibot = process.env.ANTIBOT || 'FALSE';
+const dev = process.env.DEV || '254114018035, 17199664731'
+ const DevDreaded = dev.split(",");
+    const badwordkick = process.env.BAD_WORD_KICK || 'FALSE';
+   const bad = process.env.BAD_WORD || 'fuck';
+
+    const autorecordgc = process.env.RECORDING_TYPINGGC || 'TRUE';
+    const badword
+    const autoreadrecorddm = process.env.AUTOREAD_AND_TYPE || 'TRUE';
+    const badword = bad.split(",");
+    const Owner = DevDreaded.map((v) => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(m.sender)
     const command = body.replace(prefix, "").trim().split(/ +/).shift().toLowerCase();
     const args = body.trim().split(/ +/).slice(1);
     const pushname = m.pushName || "No Name";
@@ -139,8 +157,7 @@ const audiovn = "./alive.mp3";
     };
     const mime = (quoted.msg || quoted).mimetype || "";
             const qmsg = (quoted.msg || quoted);
-    const author = process.env.STICKER_AUTHOR || 'fortunatus';
-
+    
 
 const sendd = (text) => {
 return client.sendMessage(from, { text: text, contextInfo:{"externalAdReply": {"title": `DREADED BOT`,"body": pushname, "previewType": "PHOTO","thumbnailUrl": 'https://telegra.ph/file/c75efecf7f0aef851fc02.jpg',"thumbnail": kali,"sourceUrl": ``}}}, { quoted:m})} 
@@ -149,17 +166,7 @@ const menureply = (text) => {
 return client.sendMessage(from, { text: text, contextInfo:{"externalAdReply": {"title": `DREADED BOT`,"body": `M E N U`, "previewType": "PHOTO","thumbnailUrl": 'https://telegra.ph/file/c75efecf7f0aef851fc02.jpg',"thumbnail": kali,"sourceUrl": ``}}}, { quoted:m})} 
 
 
-const appname = process.env.APP_NAME;
-const herokuapi = process.env.HEROKU_API;
-    const packname = process.env.STICKER_PACKNAME || 'dreaded';
-const antibot = process.env.ANTIBOT || 'FALSE';
-const dev = process.env.DEV || '254114018035, 17199664731'
- const DevDreaded = dev.split(",");
-    const badwordkick = process.env.BAD_WORD_KICK || 'FALSE';
-   const bad = process.env.BAD_WORD || 'fuck,mbwa,mamako,malaya,kuma,dinywa,jidinye,kumamako,kumamake,matako,mboro,coward,bastard, shenzi,idiot,cowards,nyani,jinga,ujinga,nitakudinya,dick,pussy,vagina,penis,sex,doggy,anal,blowjob,handjob,porn,porno, pornography,bdsm,cock,ngwati';
-    const autoreadrecord = process.env.AUTOREAD_AND_TYPE || 'TRUE';
-    const badword = bad.split(",");
-    const Owner = DevDreaded.map((v) => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(m.sender)
+
     // Group
                     const groupMetadata = m.isGroup ? await client.groupMetadata(m.chat).catch((e) => {}) : "";
 const groupName = m.isGroup && groupMetadata ? await groupMetadata.subject : "";
@@ -167,10 +174,7 @@ const groupName = m.isGroup && groupMetadata ? await groupMetadata.subject : "";
      const groupAdmin = m.isGroup ? await getGroupAdmins(participants) : ""; 
      const isBotAdmin = m.isGroup ? groupAdmin.includes(botNumber) : false; 
      const isAdmin = m.isGroup ? groupAdmin.includes(m.sender) : false;
-const admin = process.env.ADMIN_MSG || 'Are you an admin?';
-    const group = process.env.GROUP_ONLY_MSG || 'This a not a group chat';
-    const botAdmin = process.env.BOT_ADMIN_MSG || 'Am I an admin?'
-    const NotOwner = process.env.NOT_OWNER_MSG || 'Are you the owner?';
+
 
 const runtime = function (seconds) { 
  seconds = Number(seconds); 
@@ -260,12 +264,14 @@ reply("");
     let argsLog = budy.length > 30 ? `${q.substring(0, 30)}...` : budy;
 
 
-    if (autoreadrecord === 'TRUE' && !m.isGroup) { 
+    if (autoreadrecorddm === 'TRUE' && !m.isGroup) { 
              client.readMessages([m.key]); 
-client.sendPresenceUpdate('unavailable', from)
+
         
   client.sendPresenceUpdate('composing', m.chat);
     }
+
+
 
 
 
@@ -322,7 +328,7 @@ sendd("Do not tag!")
 
 
 
-if (m.isGroup && ){
+if (m.isGroup && autorecordgc === 'TRUE'){
 
 let dreadrecordin = ['recording','composing']
 

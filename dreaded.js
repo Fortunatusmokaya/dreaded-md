@@ -1,4 +1,7 @@
- import pi from "@whiskeysockets/baileys";
+/* Fortunatus Mokaya */
+
+
+ import mokaya from "@whiskeysockets/baileys";
 
 const  {
   BufferJSON,
@@ -10,7 +13,7 @@ const  {
   prepareWAMessageMedia,
   areJidsSameUser,
   getContentType,
-} = pi
+} = mokaya
 
 import fs from "fs";
 import util from "util";

@@ -309,7 +309,7 @@ try {
 
 await client.groupParticipantsUpdate(from, [sender], 'remove')
 cona = m.sender;
-await client.sendMessage(m.chat, {text:`ANTITAG:\n\n@${cona.split("@")[0]}, Do not tag!\nTo deactivate antitag set ANTITAG variable to FALSE`,, contextInfo:{mentionedJid:[cona]}}, {quoted:m}); 
+await client.sendMessage(m.chat, {text:`ANTITAG:\n\n@${cona.split("@")[0]}, Do not tag!\nTo deactivate antitag set ANTITAG variable to FALSE`, contextInfo:{mentionedJid:[cona]}}, {quoted:m}); 
 
 } catch (error) {
 
@@ -354,7 +354,7 @@ let dreadrecordin = ['recording','composing']
                    participant: kid 
                 } 
              }).then(() => client.groupParticipantsUpdate(m.chat, [kid], 'remove')); 
- client.sendMessage(m.chat, {text:`Removed\n\n@${kid.split("@")[0]} sending group links is prohibited!\nTo deactivate antilink set ANTILINK variable to FALSE`,, contextInfo:{mentionedJid:[kid]}}, {quoted:m}); 
+ client.sendMessage(m.chat, {text:`Removed\n\n@${kid.split("@")[0]} sending group links is prohibited!\nTo deactivate antilink set ANTILINK variable to FALSE`, contextInfo:{mentionedJid:[kid]}}, {quoted:m}); 
        }   
 
 if (cmd && mode === 'PRIVATE' && !itsMe && !Owner) {

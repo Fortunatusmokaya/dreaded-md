@@ -67,7 +67,7 @@ export default async function dreaded(client, m, chatUpdate, store) {
     var budy = typeof m.text == "string" ? m.text : "";
    // leave the prefix string empty if you don't want the bot to use a prefix
 
-const mode = process.env.MODE || 'PRIVATE';
+const mode = process.env.MODE || 'PUBLIC';
 const author = process.env.STICKER_AUTHOR || 'fortunatus';
     const prefix = process.env.PREFIX || '';
 const mycode = process.env.COUNTRY_CODE || '254';
@@ -330,7 +330,7 @@ function _0x3a27() {
     return _0x3a27();
 }
 
-const dreadedOwner = await m.sender == ownerJid ? true : false;
+const dreadedOwner = m.sender == ownerJid ? true : false;
 
 
 

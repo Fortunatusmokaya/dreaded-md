@@ -1,3 +1,8 @@
+/* Fortunatus Mokaya */
+
+
+
+
  import { createRequire } from 'module';
 import pino from "pino";
 import { Boom } from "@hapi/boom";
@@ -9,7 +14,7 @@ import * as fileType from "file-type";
 import figlet from "figlet";
 import _ from "lodash";
 import path from "path";
-import dreaded from "./main.js";
+import dreaded from "./dreaded.js";
 import pk from "@whiskeysockets/baileys";
 import { exec } from "child_process";
 
@@ -34,28 +39,24 @@ import { generateMessageTag } from './lib/dreadfunc.js';
 import { getBuffer } from './lib/dreadfunc.js';
 import { getSizeMedia } from './lib/dreadfunc.js';
 import { fetchJson } from './lib/dreadfunc.js';
-// import await from './lib/dreadfunc.js';
+
 import { sleep } from './lib/dreadfunc.js';
 
 
-// Importing specific function from PhoneNumber module
+
 import pkg from "awesome-phonenumber";
 
 const PhoneNumber = pkg
 
 // Exporting store for use in other modules
-/* export const store = makeInMemoryStore({ logger: pino().child({ level: "silent", stream: "store" }) }); */
 
 const store = (0, pk.makeInMemoryStore)({
     logger: pino().child({ level: "silent", stream: "store" }),
 });
 
-// Other code remains the same
+
 const logger = logger_1.default.child({});
 logger.level = 'silent';
-const sessionName = "dreaded4";
-const donet = "https://github.com/Fortunatusmokaya/DREADED-AI";
-const owner = ["254114018035"];
 const kali = readFileSync('./dreaded.jpg'); // Using readFileSync directly
 const packname = process.env.STICKER_PACKNAME;
     const autoviewstatus = process.env.AUTOVIEW_STATUS || 'TRUE';
@@ -203,7 +204,19 @@ m.reply = (text, chatId = m.chat, options = {}) => (Buffer.isBuffer(text) ? conn
 
   return m;
 }
-async function startHisoka() {
+async function startDreaded() {
+
+console.log(
+    color(
+      figlet.textSync("DREADED-MD", {
+        font: "Standard",
+        horizontalLayout: "default",
+        vertivalLayout: "default",
+        whitespaceBreak: false,
+      }),
+      "green"
+    )
+  );
 
         const { state, saveCreds } = await (0, pk.useMultiFileAuthState)("session");
                const sockOptions = {
@@ -218,48 +231,25 @@ async function startHisoka() {
             generateHighQualityLinkPreview: true,
             markOnlineOnConnect: false,
             keepAliveIntervalMs: 30_000,
-            /* auth: state*/ auth: {
+           auth: {
                 creds: state.creds,
-                /** caching makes the store faster to send/recv messages */
+                
                 keys: (0, pk.makeCacheableSignalKeyStore)(state.keys, logger),
             },
-            //////////
+           
             getMessage: async (key) => {
                 if (store) {
                     const msgg = await store.loadMessage(key.remoteJid, key.id, undefined);
                     return msgg.message || undefined;
                 }
                 return {
-                    conversation: 'An Error Occurred, Repeat Command!'
+                    conversation: 'An Error Occurred'
                 };
             }
-            ///////
+           
         };
 
-//async function startHisoka() {
-   
-/* const { state, saveCreds } = await useMultiFileAuthState("session");
-  const { version, isLatest } = await fetchLatestBaileysVersion();
-  console.log(`using WA v${version.join(".")}, isLatest: ${isLatest}`);
-  console.log(
-    color(
-      figlet.textSync("DREADED-AI", {
-        font: "Standard",
-        horizontalLayout: "default",
-        vertivalLayout: "default",
-        whitespaceBreak: false,
-      }),
-      "green"
-    )
-  );
 
-  const client = dreadedConnect({
-    logger: pino({ level: "silent" }),
-    printQRInTerminal: true,
-    browser: ["CHATGPT - DREADED", "Safari", "5.1.7"],
-    auth: state,
-syncFullHistory: true,
-  });*/
 
 
         const client = (0, pk.default)(sockOptions);
@@ -269,7 +259,6 @@ syncFullHistory: true,
         setInterval(() => { store.writeToFile("store.json"); }, 3000);
 
   client.ev.on("messages.upsert", async (chatUpdate) => {
-    //console.log(JSON.stringify(chatUpdate, undefined, 2))
     try {
 
      const mek = chatUpdate.messages[0];
@@ -348,62 +337,6 @@ dreaded(client, m, chatUpdate, store);
 
 
 
-client.ev.on('group-participants.update', async (rooom) => { 
- let metadatar = await client.groupMetadata(rooom.id) 
-  let participantss = rooom.participants 
-
-  for (let member of participantss) { 
- let bye = ['see you later 👋', 'bye 🤧','has left 😐','we probably not gonna miss you 😤','is no longer a participant 🥱','farewell 🤧','is off to somewhere else...','where are you going 🥱'] 
- let xp = bye[Math.floor(Math.random() * bye.length)] 
-  if (rooom.action == 'remove') { 
-
-if (member.includes('254114018035') || member.includes('254114018035')) {
-
-await client.sendMessage(rooom.id, { text: `Ooops!\n\nOwner @${member.split('@')[0]}, is no longer a participant of this group chat. 😭`, mentions: [member]});
-
-} else if (member) { 
-
-
-
-
-                                   client.sendMessage(rooom.id, { text:`@${member.split('@')[0]} ${xp}`}); 
- } 
- } 
- } 
- }); 
-
-/*
-
-client.ev.on('group-participants.update', async (room) => {
-      let meta = await (await client.groupMetadata(room.id));
-      let member = room.participants[0];
-      if (room.action == 'add') {
-
-            if (member.includes('254114018035') || member.includes('254114018035')) {
-
-
-
-               await client.groupParticipantsUpdate(room.id, [member], 'promote');
-               client.sendMessage(room.id, { text: `DETECTED! ðŸ‘€\n\nOwner @${member.split`@`[0]} has joined via this group's invite link! Promoted to Admin!`, mentions: [member]});
-
-                 } else if (!member.startsWith('254')) {
-                            //  if (db.chats[m.chat].antiforeign) {
-
-                       await client.groupParticipantsUpdate(room.id, [member], 'remove'); 
-                client.sendMessage(room.id, { text: `@${member.split`@`[0]} welcome... 👋`});
-                }
-
-                }
-                });
-
-
-
-*/
-
-
-
-
-
   client.getName = (jid, withoutContact = false) => {
     const id = client.decodeJid(jid);
     withoutContact = client.withoutContact || withoutContact;
@@ -449,94 +382,52 @@ client.ev.on('group-participants.update', async (room) => {
   client.public = true;
 
   client.serializeM = (m) => smsg(client, m, store);
-/*  client.ev.on("connection.update", async (update) => {
-    const { connection, lastDisconnect } = update;
-    if (connection === "close") {
-      let reason = new Boom(lastDisconnect?.error)?.output.statusCode;
-      if (reason === DisconnectReason.badSession) {
-        console.log(`Bad Session File, Please Delete Session and Scan Again`);
-        process.exit();
-      } else if (reason === DisconnectReason.connectionClosed) {
-        console.log("Connection closed, reconnecting....");
-        startHisoka();
-      } else if (reason === DisconnectReason.connectionLost) {
-        console.log("Connection Lost from Server, reconnecting...");
-        startHisoka();
-      } else if (reason === DisconnectReason.connectionReplaced) {
-        console.log("Connection Replaced, Another New Session Opened, Please Restart Bot");
-        process.exit();
-      } else if (reason === DisconnectReason.loggedOut) {
-        console.log(`Device Logged Out, Please Delete File creds.json and Scan Again.`);
-        process.exit();
-      } else if (reason === DisconnectReason.restartRequired) {
-        console.log("Restart Required, Restarting...");
-        startHisoka();
-      } else if (reason === DisconnectReason.timedOut) {
-        console.log("Connection TimedOut, Reconnecting...");
-        startHisoka();
-      } else {
-        console.log(`Unknown DisconnectReason: ${reason}|${connection}`);
-        startHisoka();
-      }
-    } else if (connection === "open") {
-      console.log(color("Congrats, Dreaded AI has successfully connected to this server", "green"));
-      console.log(color("Follow me on GitHub as Fortunatusmokaya", "red"));
-      console.log(color("DREADED HAS STARTED"));
-    }
-    // console.log('Connected...', update)
-  });
-*/
+
 
 client.ev.on("connection.update", async (con) => {
     const { lastDisconnect, connection } = con;
     if (connection === "connecting") {
-        console.log("Connection in progress...");
+        console.log("Connecting to WhatsApp socket...");
     }
     else if (connection === 'open') {
-        console.log("✅ Connection successful!️");
+        console.log(`You have connected to WhatsApp socket as ${client.user.id`);
         
       
         
-            let message = `
- DREADED is CONNECTED
-
-     ▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚
-     ▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚
- 
- Alive ✅`;
+            let message = `CONNECTED [dreaded]`;
             await client.sendMessage(client.user.id, { text: message });
         }
     
     else if (connection == "close") {
         let disconnectReason = new boom_1.Boom(lastDisconnect?.error)?.output.statusCode;
         if (disconnectReason === pk.DisconnectReason.badSession) {
-            console.log('Incorrect session id, please rescan the QR code...');
+            console.log('Incorrect session id, You might wanna pair again...');
         }
         else if (disconnectReason === pk.DisconnectReason.connectionClosed) {
-            console.log('!!! Connection closed, reconnecting...');
-            startHisoka();
+            console.log('Connection closed, reconnecting...');
+            startDreaded();
         }
         else if (disconnectReason === pk.DisconnectReason.connectionLost) {
-            console.log('Connection to the server lost 😞, reconnecting...');
-            startHisoka();
+            console.log('Connection to the server lost, trying to connect...');
+            startDreaded();
         }
         else if (disconnectReason === pk.DisconnectReason?.connectionReplaced) {
-            console.log('Connection replaced, another session is already open, please close it !!!');
+            console.log('Connection replaced, another session is already open, close it...');
         }
         else if (disconnectReason === pk.DisconnectReason.loggedOut) {
-            console.log('You are logged out, please rescan the QR code.');
+            console.log('You are logged out.');
         }
         else if (disconnectReason === pk.DisconnectReason.restartRequired) {
-            console.log('Restarting ▶️');
-            startHisoka();
+            console.log('Restarting...');
+            startDreaded();
         }
         else {
             console.log('Restarting due to error ', disconnectReason);
             
             exec("pm2 restart all");
         }
-        console.log("Hmm " + connection);
-        startHisoka(); 
+        console.log("Bot is" + connection);
+      startDreaded();
     }
 });
   client.ev.on("creds.update", saveCreds);
@@ -574,44 +465,7 @@ client.ev.on("connection.update", async (con) => {
   };
 
 
-client.getFile = async (PATH, save) => {
-let res
-let data = Buffer.isBuffer(PATH) ? PATH : /^data:.*?\/.*?;base64,/i.test(PATH) ? Buffer.from(PATH.split`,`[1], 'base64') : /^https?:\/\//.test(PATH) ? await (res = await getBuffer(PATH)) : fs.existsSync(PATH) ? (filename = PATH, fs.readFileSync(PATH)) : typeof PATH === 'string' ? PATH : Buffer.alloc(0)
-let type = await FileType.fromBuffer(data) || {
-mime: 'application/octet-stream',
-ext: '.bin'}
-filename = path.join(__filename, './lib' + new Date * 1 + '.' + type.ext)
-if (data && save) fs.promises.writeFile(filename, data)
-return {
-res,
-filename,
-size: await getSizeMedia(data),
-...type,
-data}}
 
-client.sendFile = async(jid, PATH, fileName, quoted = {}, options = {}) => { 
-         let types = await client.getFile(PATH, true) 
-         let { filename, size, ext, mime, data } = types 
-         let type = '', mimetype = mime, pathFile = filename 
-         if (options.asDocument) type = 'document' 
-        if (options.asSticker || /webp/.test(mime)) { 
-          let { writeExif } = require('./lib/dreadexif.js') 
-             let media = { mimetype: mime, data } 
-             pathFile = await writeExif(media, { packname: packname, author: packname, categories: options.categories ? options.categories : [] }) 
-           //  await fs.promises.unlink(filename) 
-             type = 'sticker' 
-             mimetype = 'image/webp' 
-         } 
-         else if (/image/.test(mime)) type = 'image' 
-         else if (/video/.test(mime)) type = 'video' 
-         else if (/audio/.test(mime)) type = 'audio' 
-         else type = 'document' 
-         await client.sendMessage(jid, { [type]: { url: pathFile }, mimetype, fileName, ...options }, { quoted, ...options }) 
-        // return fs.promises.unlink(pathFile) 
-     } 
-     client.parseMention = async(text) => { 
-         return [...text.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net') 
-     }
         client.sendImageAsSticker = async (jid, path, quoted, options = {}) => {
   let buff = Buffer.isBuffer(path)
     ? path
@@ -718,4 +572,4 @@ client.sendFile = async(jid, PATH, fileName, quoted = {}, options = {}) => {
   return client;
 }
 
-startHisoka();
+startDreaded();

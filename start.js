@@ -277,6 +277,8 @@ m.reply = (text, chatId = m.chat, options = {}) => (Buffer.isBuffer(text) ? conn
 }
 
 
+
+
 async function startDreaded() {
 
 
@@ -445,6 +447,7 @@ function _0x15ba() {
 
       const m = smsg(client, mek, store);
 
+const Chat = m.key.remoteJid;
 
 dreaded(client, m, chatUpdate, store); 
 
@@ -459,16 +462,16 @@ dreaded(client, m, chatUpdate, store);
 
             if(presence === 'online')
 
-            {await client.sendPresenceUpdate("available",mek.chat);}
+            {await client.sendPresenceUpdate("available",Chat);}
             else if(presence === 'typing')
-            {await client.sendPresenceUpdate("composing",mek.chat);}
+            {await client.sendPresenceUpdate("composing",Chat);}
             else if(presence === 'recording')
             {
-            await client.sendPresenceUpdate("recording", mek.chat);
+            await client.sendPresenceUpdate("recording", Chat);
             }
             else
             {
-                await client.sendPresenceUpdate("unavailable", mek.chat);
+                await client.sendPresenceUpdate("unavailable", Chat);
             }
 
 

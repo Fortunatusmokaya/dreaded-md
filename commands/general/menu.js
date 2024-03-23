@@ -8,13 +8,13 @@ const getMenu = async (client, m, menureply) => {
     for (const category of categories) {
       const commandFiles = fs.readdirSync(`./commands/${category}`).filter((file) => file.endsWith('.js'));
 
-      menuText += `༆ *${category.charAt(0).toUpperCase() + category.slice(1)} Commands:*\n`;
+      menuText += `༆ *${category.charAt(0).toUpperCase() + category.slice(1)}:*\n`;
       for (const file of commandFiles) {
         const commandName = file.replace('.js', '');
         menuText += `${commandName}\n`;
       }
 
-      menuText += '\n'; // Add a newline between categories
+      menuText += '\n'; 
     }
 
    // await client.sendMessage(m.chat, menuText, { quoted: m });

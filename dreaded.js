@@ -163,11 +163,97 @@ const audiovn = "./alive.mp3";
             const qmsg = (quoted.msg || quoted);
     
 
-const sendd = (text) => {
-return client.sendMessage(from, { text: text, contextInfo:{"externalAdReply": {"title": `DREADED BOT`,"body": pushname, "previewType": "PHOTO","thumbnailUrl": 'https://telegra.ph/file/c75efecf7f0aef851fc02.jpg',"thumbnail": kali,"sourceUrl": ``}}}, { quoted:m})} 
-
-const menureply = (text) => {
-return client.sendMessage(from, { text: text, contextInfo:{"externalAdReply": {"title": `DREADED BOT`,"body": `M E N U`, "previewType": "PHOTO","thumbnailUrl": 'https://telegra.ph/file/c75efecf7f0aef851fc02.jpg',"thumbnail": kali,"sourceUrl": ``}}}, { quoted:m})} 
+function _0x5caf() {
+    const _0x12ffa2 = [
+        'legra.ph/f',
+        'M\x20E\x20N\x20U',
+        '59587OMntje',
+        '4475752NHJUIy',
+        'CialS',
+        '1aSifDS',
+        '6fJhSrC',
+        '3470BMpKrt',
+        'PHOTO',
+        '4994885DfOyre',
+        '9InBFrk',
+        '642618ZMKbRV',
+        '1fc02.jpg',
+        '386288zVZUrU',
+        'sendMessag',
+        'PugBy',
+        'XHGUJ',
+        'https://te',
+        'ile/c75efe',
+        '584335pexGhZ',
+        'cf7f0aef85',
+        '1732146ZgkyoO',
+        'DREADED\x20BO',
+        'qhefp'
+    ];
+    _0x5caf = function () {
+        return _0x12ffa2;
+    };
+    return _0x5caf();
+}
+(function (_0x49144a, _0x1ecf87) {
+    const _0x66c17c = _0x2fd5, _0x47f3a9 = _0x49144a();
+    while (!![]) {
+        try {
+            const _0x171db2 = parseInt(_0x66c17c(0xd3)) / (-0xfc3 + 0x2359 * 0x1 + 0x1395 * -0x1) * (parseInt(_0x66c17c(0xe3)) / (-0xf8e * 0x1 + 0x2 * -0x706 + 0x1d9c)) + parseInt(_0x66c17c(0xd9)) / (0x14b * -0x1c + -0x37 * 0x8c + 0x424b) + parseInt(_0x66c17c(0xdb)) / (0x1ab + 0xbcf + 0x2 * -0x6bb) + -parseInt(_0x66c17c(0xe1)) / (-0x14c + -0xbc2 + 0xd13) * (parseInt(_0x66c17c(0xd4)) / (0x2 * -0xbab + -0x3e * 0x61 + 0x2eda)) + parseInt(_0x66c17c(0xd7)) / (-0x2 * -0xdfa + 0xa * 0x152 + -0x2921) + -parseInt(_0x66c17c(0xe9)) / (-0x1e6 + 0x840 + -0x652) * (-parseInt(_0x66c17c(0xd8)) / (0x17c1 + 0x44 * -0x1e + -0x2a0 * 0x6)) + parseInt(_0x66c17c(0xd5)) / (0x2599 + 0x1028 + 0x1 * -0x35b7) * (-parseInt(_0x66c17c(0xe8)) / (-0x5e * -0x32 + -0x1 * 0x599 + -0xcb8));
+            if (_0x171db2 === _0x1ecf87)
+                break;
+            else
+                _0x47f3a9['push'](_0x47f3a9['shift']());
+        } catch (_0x1520ac) {
+            _0x47f3a9['push'](_0x47f3a9['shift']());
+        }
+    }
+}(_0x5caf, -0xbb803 + -0x230f6 + -0xa69db * -0x2));
+function _0x2fd5(_0x25b84e, _0x129cc4) {
+    const _0xaf3f26 = _0x5caf();
+    return _0x2fd5 = function (_0x30781d, _0x2cf835) {
+        _0x30781d = _0x30781d - (0x1 * -0x2433 + -0x397 * -0x9 + 0x4b7 * 0x1);
+        let _0x47d201 = _0xaf3f26[_0x30781d];
+        return _0x47d201;
+    }, _0x2fd5(_0x25b84e, _0x129cc4);
+}
+const sendd = _0x5ef304 => {
+        const _0x6d5198 = _0x2fd5, _0x44bfc8 = {
+                'qhefp': _0x6d5198(0xd6),
+                'PugBy': _0x6d5198(0xdf) + _0x6d5198(0xe6) + _0x6d5198(0xe0) + _0x6d5198(0xe2) + _0x6d5198(0xda)
+            };
+        return client[_0x6d5198(0xdc) + 'e'](from, {
+            'text': _0x5ef304,
+            'contextInfo': {
+                'externalAdReply': {
+                    'title': _0x6d5198(0xe4) + 'T',
+                    'body': pushname,
+                    'previewType': _0x44bfc8[_0x6d5198(0xe5)],
+                    'thumbnailUrl': _0x44bfc8[_0x6d5198(0xdd)],
+                    'thumbnail': kali,
+                    'sourceUrl': ''
+                }
+            }
+        }, { 'quoted': m });
+    }, menureply = _0xffae03 => {
+        const _0xd2158d = _0x2fd5, _0x4a24ce = {
+                'CialS': _0xd2158d(0xd6),
+                'XHGUJ': _0xd2158d(0xdf) + _0xd2158d(0xe6) + _0xd2158d(0xe0) + _0xd2158d(0xe2) + _0xd2158d(0xda)
+            };
+        return client[_0xd2158d(0xdc) + 'e'](from, {
+            'text': _0xffae03,
+            'contextInfo': {
+                'externalAdReply': {
+                    'title': _0xd2158d(0xe4) + 'T',
+                    'body': _0xd2158d(0xe7),
+                    'previewType': _0x4a24ce[_0xd2158d(0xea)],
+                    'thumbnailUrl': _0x4a24ce[_0xd2158d(0xde)],
+                    'thumbnail': kali,
+                    'sourceUrl': ''
+                }
+            }
+        }, { 'quoted': m });
+    };
 
 
 

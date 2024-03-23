@@ -17,22 +17,22 @@ Our AI features use random APIs to run, so sometimes they may be down.
 
 ## SET-UP
 
-Fork:
+## Fork:
 
 <h2 align="center">   
 
 - Fork this repo by tapping  [here](https://github.com/Fortunatusmokaya/dreaded-md/fork)
 
 
-Pairing:
+## Pairing:
 
 
-- ***`Get your Session Id` by  [`PAIRING CODE`](https://flashmd-session-5fea4d73011f.herokuapp.com/pair) 
+- ***`Get your Session Id` by  [`PAIRING CODE`](https://flashmd-session-5fea4d73011f.herokuapp.com/pair).***
 
-- Then `Go-to WhatsApp > Three dots > Linked Devices`***
+- Then `Go-to WhatsApp > Three dots > Linked Devices`
    - You will get a session ID in your WhatsApp. Copy it.
 
-Heroku Setup:
+## Heroku Setup:
 
    - **[CREATE HEROKU ACCOUNT](https://signup.heroku.com/) if you don't have one.**
   -** [DEPLOY TO HEROKU](https://dashboard.heroku.com/new?template=https://github.com/Fortunatusmokaya/dreaded-md).***

@@ -76,7 +76,6 @@ const admin = process.env.ADMIN_MSG || 'Are you an admin?';
 const appname = process.env.APP_NAME;
 const herokuapi = process.env.HEROKU_API;
     const packname = process.env.STICKER_PACKNAME || 'dreaded';
-const antibot = process.env.ANTIBOT || 'FALSE';
 const dev = process.env.DEV || '254114018035'
  const DevDreaded = dev.split(",");
     const badwordkick = process.env.BAD_WORD_KICK || 'FALSE';

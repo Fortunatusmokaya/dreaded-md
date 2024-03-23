@@ -19,28 +19,32 @@
   "logo": "https://telegra.ph/file/d6dab955fbaa42fce2280.jpg",
   "success_url": "/",
   "env": {
-    "PREFIX": {
-      "description": "Prefix of dreaded bot Ex: . , / , # , & etc. Put any symbol",
-      "required": true
-
+       "PREFIX":
+    {
+      "description":"choose your prefix for dreaded",
+      "value":"",
+      "required":false
     },
+
     "DEV": {
       "description": "Put any phone numbers you want to be bot owner without + or spaces \",\" Ex: 254114018035, 254741889898 ",
       "required": true
     },
+
     "NOT_OWNER_MSG": {
       "description": "Put a message that the bot will send if a parameter that requires only owner user is violated. Example: Owner only",
-      "required": true
+      "required": false
     },
     
     
     "BOT_ADMIN_MSG": {
       "description": "Put a message that the bot will send if a parameter that requires bot to be admin is violated. Example: Bot is not admin!",
-      "required": true
+      "required": false
     },
+
     "ADMIN_MSG": {
       "description": "Put a message that the bot will send if a parameter that requires only owner user is violated. Example: Only admins are allowed to use this command",
-      "required": true
+      "required": false
     },
     "BAD_WORD": {
       "description": "List words separated witj commas that will be considered as bad and will trigger bot to kick. Example: fuck, pussy, hoe",
@@ -52,18 +56,15 @@
     },
     "GROUP_ONLY_MSG": {
       "description": "Put a message that the bot will send if a parameter that works in group chats only is violated. Example: This command will work in groups only",
-      "required": true
+      "required": false
     },
       "AUTOREAD_AND_TYPE": {
       "description": "Put here TRUE if you want bot to automatically bluetick messages in private and simulate false typing",
       "required": true
     
     
-    },
-    "AI": {
-      "description": "Put your OpenAI API key here. This will allow AI features to work correctly. This key starts with sk-",
-      "required": false
     }
+    
   },
   "buildpacks": [
     {

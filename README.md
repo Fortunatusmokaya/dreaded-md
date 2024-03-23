@@ -39,7 +39,7 @@ Our AI features use random APIs to run, so sometimes they may be down.
 
 - ***Now [`DEPLOY TO HEROKU`](https://dashboard.heroku.com/new?template=https://github.com/Fortunatusmokaya/dreaded-md).***
 
--***`Fill in all the required variables and deploy.`***
+-***`Fill in all the required variables and deploy the bot.`***
 
 
 # Credits

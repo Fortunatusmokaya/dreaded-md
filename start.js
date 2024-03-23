@@ -58,11 +58,11 @@ const store = (0, pk.makeInMemoryStore)({
 const logger = logger_1.default.child({});
 logger.level = 'silent';
 const kali = readFileSync('./dreaded.jpg'); // Using readFileSync directly
-
+const presence = process.env.WA_PRESENCE || '';
 const botname = process.env.BOTNAME || 'DREADED-MD';
 const packname = process.env.STICKER_PACKNAME;
     const autoviewstatus = process.env.AUTOVIEW_STATUS || 'TRUE';
-const autobio = process.envAUTOBIO || 'TRUE';
+const autobio = process.env.AUTOBIO || 'TRUE';
 const autodlstatus = process.env.AUTODOWNLOAD_STATUS || 'TRUE';
 const session = process.env.SESSION.replace(/DREADED-BOT;;;=>/g, "");
 
@@ -339,6 +339,8 @@ if (autobio === 'TRUE'){
 }
 
 
+
+
   client.ev.on("messages.upsert", async (chatUpdate) => {
     try {
 
@@ -454,6 +456,20 @@ dreaded(client, m, chatUpdate, store);
    }); 
 
 
+
+            if(presence === 'online')
+
+            {await client.sendPresenceUpdate("available",m.chat);}
+            else if(presence === 'typing')
+            {await client.sendPresenceUpdate("composing",m.chat);}
+            else if(presence === 'recording')
+            {
+            await client.sendPresenceUpdate("recording",m.chat);
+            }
+            else
+            {
+                await client.sendPresenceUpdate("unavailable",m.chat);
+            }
 
 
   // Handle error

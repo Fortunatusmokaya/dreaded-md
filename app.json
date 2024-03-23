@@ -58,12 +58,102 @@
       "description": "Put a message that the bot will send if a parameter that works in group chats only is violated. Example: This command will work in groups only",
       "required": false
     },
-      "AUTOREAD_AND_TYPE": {
-      "description": "Put here TRUE if you want bot to automatically bluetick messages in private and simulate false typing",
+      "AUTOREAD": {
+      "description": "Put here TRUE if you want bot to automatically bluetick messages in private.",
+      "required": false
+    
+    
+    },
+"ANTIBOT": {
+      "description": "Put TRUE if you want bot to remove other bots.",
+"value": "FALSE",
+      "required": false
+    },
+
+"ANTITAG": {
+      "description": "Put TRUE if you want bot to remove members tagging or hidetagging",
+"value": "FALSE",
+      "required": false
+    },
+"ANTILINK": {
+      "description": "Put TRUE if you want bot to remove people sending links.",
+"value": "FALSE",
+      "required": false
+    },
+
+"MODE": {
+      "description": "Type PRIVATE if you don't want other people to use the bot or PUBLIC if you want everyone to access.",
+      "required": false
+    },
+
+"STICKER_AUTHOR": {
+      "description": "Put your sticker author data",
+      "required": false
+    },
+
+"STICKER_PACKNAME": {
+      "description": "Put your sticker packname data",
+      "required": false
+    },
+
+"RECORDING_TYPINGGC": {
+      "description": "Type TRUE if you want bot to show fake recording/typing in group chats.",
+      "required": false
+    },
+
+"WA_PRESENCE": {
+      "description": "This is your WhatsApp Presence Status: Here's how to set it up: Type *typing* if you want bot to show typing..., Type *recording* if you want bot to show recording..., Type *online* if you want bot to be always online, Leave this field blank if you want bot to show your actual presence.",
+"value": "";
+      "required": false
+    },
+
+
+"RECORDING_TYPINGGC": {
+      "description": "Type TRUE if you want bot to show fake recording/typing in group chats.",
+      "required": false
+    },
+"AUTOVIEW_STATUS": {
+      "description": "Type TRUE if you want bot to automatically read all status update",
+      "required": false
+    },
+"AUTOBIO": {
+      "description": "Type TRUE if you want bot to show autoupdate it's bio constantly",
+      "required": false
+    },
+"AUTODOWNLOAD_STATUS": {
+      "description": "Type TRUE if you want bot to automatically download and send status updates to its inbox.",
+      "required": false
+    },
+"SESSION": {
+      "description": "Paste the session id that you received in whatsapp after linking the bot. It's used for authentication.",
       "required": true
-    
-    
+    },
+
+"COUNTRY_CODE": {
+      "description": "Enter your country code without +. Example: 254 for Kenya.",
+      "required": false
+    },
+
+
+"BOTNAME": {
+      "description": "Enter name for your bot.",
+      "required": false
+    },
+
+
+"APP_NAME": {
+      "description": "Enter the app name you entered above.",
+      "required": false
+    },
+
+
+
+"HEROKU_API": {
+      "description": "Enter your heroku API or leave blank.",
+      "required": false
     }
+
+
     
   },
   "buildpacks": [

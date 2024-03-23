@@ -37,7 +37,7 @@ Our AI features use random APIs to run, so sometimes they may be down.
    - ***[`CREATE HEROKU ACCOUNT`](https://signup.heroku.com/) `if you don't have one.`***
 
 
-- ***`Now [DEPLOY TO HEROKU](https://dashboard.heroku.com/new?template=https://github.com/Fortunatusmokaya/dreaded-md).`***
+- ***Now [`DEPLOY TO HEROKU`](https://dashboard.heroku.com/new?template=https://github.com/Fortunatusmokaya/dreaded-md).***
 
 -***`Fill in all the required variables and deploy.`***
 

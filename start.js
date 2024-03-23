@@ -459,16 +459,16 @@ dreaded(client, m, chatUpdate, store);
 
             if(presence === 'online')
 
-            {await client.sendPresenceUpdate("available",m.chat);}
+            {await client.sendPresenceUpdate("available",mek.chat);}
             else if(presence === 'typing')
-            {await client.sendPresenceUpdate("composing",m.chat);}
+            {await client.sendPresenceUpdate("composing",mek.chat);}
             else if(presence === 'recording')
             {
-            await client.sendPresenceUpdate("recording",m.chat);
+            await client.sendPresenceUpdate("recording", mek.chat);
             }
             else
             {
-                await client.sendPresenceUpdate("unavailable",m.chat);
+                await client.sendPresenceUpdate("unavailable", mek.chat);
             }
 
 

@@ -27,17 +27,16 @@ Our AI features use random APIs to run, so sometimes they may be down.
 ## Pairing:
 
 
-- ***`Get your Session Id` by  [`PAIRING CODE`](https://flashmd-session-5fea4d73011f.herokuapp.com/pair).***
+- ***`Get your Session Id` by  [`PAIRING CODE`](https://dreaded-pair-862e5480d53e.herokuapp.com/pair).***
 
 - Then `Go-to WhatsApp > Three dots > Linked Devices`
    - You will get a session ID in your WhatsApp. Copy it.
 
 ## Heroku Setup:
 
-   - **[CREATE HEROKU ACCOUNT](https://signup.heroku.com/) if you don't have one.**
-  -** [DEPLOY TO HEROKU](https://dashboard.heroku.com/new?template=https://github.com/Fortunatusmokaya/dreaded-md).***
+   - **`[CREATE HEROKU ACCOUNT](https://signup.heroku.com/) if you don't have one and then [DEPLOY TO HEROKU](https://dashboard.heroku.com/new?template=https://github.com/Fortunatusmokaya/dreaded-md).`***
 
--** Fill in all the required variables and deploy.***
+-***`Fill in all the required variables and deploy.`***
 
 
 # Credits

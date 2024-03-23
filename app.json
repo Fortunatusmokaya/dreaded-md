@@ -103,7 +103,7 @@
 
 "WA_PRESENCE": {
       "description": "This is your WhatsApp Presence Status: Here's how to set it up: Type *typing* if you want bot to show typing..., Type *recording* if you want bot to show recording..., Type *online* if you want bot to be always online, Leave this field blank if you want bot to show your actual presence.",
-"value": "";
+"value": "",
       "required": false
     },
 

@@ -378,7 +378,7 @@ client.ev.on("connection.update", async (con) => {
         console.log("Connecting to WhatsApp socket...");
     }
     else if (connection === 'open') {
-        console.log(`You have connected to WhatsApp socket as ${client.user.id`);
+        console.log(`You have connected to WhatsApp socket as ${client.user.id}`);
         
       
         

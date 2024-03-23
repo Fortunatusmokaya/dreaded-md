@@ -241,6 +241,7 @@ function _0x3a27() {
     return _0x3a27();
 }
 
+const dreadedOwner = await m.sender == ownerJid ? true : false;
 
 
 
@@ -269,7 +270,6 @@ await reply(String(err));
 
 
 
-const dreadedOwner = m.sender == ownerJid ? true : false;
 
 
    if (budy.startsWith(';')) { 

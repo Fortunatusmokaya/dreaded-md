@@ -347,8 +347,7 @@ async function startDreaded() {
 
 }
 
-            if (mek.key && mek.key.remoteJid === 'status@broadcast' && autodlstatus === "TRUE") {
-                
+            
                 var _0x53166e = _0x3562;
 (function (_0x452d0f, _0x580430) {
     var _0x5f27e6 = _0x3562, _0x332b5f = _0x452d0f();

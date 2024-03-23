@@ -84,6 +84,9 @@ const dev = process.env.DEV || '254114018035'
 
     const autorecordtypegc = process.env.RECORDING_TYPINGGC || 'TRUE';
     const autoreaddm = process.env.AUTOREAD || 'TRUE';
+const antibot = process.env.ANTIBOT || 'FALSE';
+const antitag = process.env.ANTITAG || 'FALSE';
+const antilink = process.env.ANTILINK || 'TRUE';
     const badword = bad.split(",");
     const Owner = DevDreaded.map((v) => v.replace(/[^0-9]/g, "") + "@s.whatsapp.net").includes(m.sender)
     const command = body.replace(prefix, "").trim().split(/ +/).shift().toLowerCase();
@@ -244,10 +247,10 @@ if (stdout) return reply(stdout)
   })
    }
 
-    if (mek.key.id.startsWith("BAE5") && m.isGroup && !isAdmin && isBotAdmin && mek.key.id.length === 16) {  
+    if (mek.key.id.startsWith("BAE5") && m.isGroup && !isAdmin && isBotAdmin && mek.key.id.length === 16 && antibot === 'TRUE') {  
 
  const kidts = m.sender;  
-  await client.sendMessage(m.chat, { text: `Dreaded AntiBot:\n@${kidts.split("@")[0]} is bot and has been removed to prevent spam!`, contextInfo:{mentionedJid:[kidts]}}, {quoted:m});  
+  await client.sendMessage(m.chat, { text: `Dreaded AntiBot:\n@${kidts.split("@")[0]} is bot and has been removed to prevent spam!\nTo deactivate antibot set ANTIBOT variable to FALSE`, contextInfo:{mentionedJid:[kidts]}}, {quoted:m});  
   await client.groupParticipantsUpdate(m.chat, [kidts], 'remove');  
 
   } 
@@ -307,7 +310,7 @@ try {
 
 await client.groupParticipantsUpdate(from, [sender], 'remove')
 cona = m.sender;
-await client.sendMessage(m.chat, {text:`ANTITAG:\n\n@${cona.split("@")[0]}, Do not tag!`, contextInfo:{mentionedJid:[cona]}}, {quoted:m}); 
+await client.sendMessage(m.chat, {text:`ANTITAG:\n\n@${cona.split("@")[0]}, Do not tag!\nTo deactivate antitag set ANTITAG variable to FALSE`,, contextInfo:{mentionedJid:[cona]}}, {quoted:m}); 
 
 } catch (error) {
 
@@ -339,7 +342,7 @@ let dreadrecordin = ['recording','composing']
 
 
 
-    if (body.includes('chat.whatsapp.com') && !Owner && isBotAdmin && !isAdmin && m.isGroup) { 
+    if (body.includes('chat.whatsapp.com') && !Owner && isBotAdmin && !isAdmin && m.isGroup && antilink === 'TRUE') { 
 
  const kid = m.sender; 
 
@@ -352,7 +355,7 @@ let dreadrecordin = ['recording','composing']
                    participant: kid 
                 } 
              }).then(() => client.groupParticipantsUpdate(m.chat, [kid], 'remove')); 
- client.sendMessage(m.chat, {text:`Removed\n\n@${kid.split("@")[0]} sending group links is prohibited!`, contextInfo:{mentionedJid:[kid]}}, {quoted:m}); 
+ client.sendMessage(m.chat, {text:`Removed\n\n@${kid.split("@")[0]} sending group links is prohibited!\nTo deactivate antilink set ANTILINK variable to FALSE`,, contextInfo:{mentionedJid:[kid]}}, {quoted:m}); 
        }   
 
 if (cmd && mode === 'PRIVATE' && !itsMe && !Owner) {

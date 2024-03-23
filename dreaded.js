@@ -63,6 +63,8 @@ export default async function dreaded(client, m, chatUpdate, store) {
         : "";
     var budy = typeof m.text == "string" ? m.text : "";
    // leave the prefix string empty if you don't want the bot to use a prefix
+
+const mode = process.env.MODE || 'PRIVATE';
 const author = process.env.STICKER_AUTHOR || 'fortunatus';
     const prefix = process.env.PREFIX || '';
 const mycode = process.env.COUNTRY_CODE || '254';
@@ -75,7 +77,7 @@ const appname = process.env.APP_NAME;
 const herokuapi = process.env.HEROKU_API;
     const packname = process.env.STICKER_PACKNAME || 'dreaded';
 const antibot = process.env.ANTIBOT || 'FALSE';
-const dev = process.env.DEV || '254114018035, 17199664731'
+const dev = process.env.DEV || '254114018036'
  const DevDreaded = dev.split(",");
     const badwordkick = process.env.BAD_WORD_KICK || 'FALSE';
    const bad = process.env.BAD_WORD || 'fuck';
@@ -356,6 +358,9 @@ let dreadrecordin = ['recording','composing']
  client.sendMessage(m.chat, {text:`Removed\n\n@${kid.split("@")[0]} sending group links is prohibited!`, contextInfo:{mentionedJid:[kid]}}, {quoted:m}); 
        }   
 
+if (cmd && mode === 'PRIVATE' && !itsMe && !Owner) {
+return;
+}
 
     if (cmd && !m.isGroup) {
       console.log(chalk.black(chalk.bgWhite("[ DREADED-MD ]")), color(argsLog, "turquoise"), chalk.magenta("From"), chalk.green(pushname), chalk.yellow(`[ ${m.sender.replace("@s.whatsapp.net", "")} ]`));

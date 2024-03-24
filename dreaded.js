@@ -130,6 +130,15 @@ const reactionMessage = {
 }
 
 
+async function sendReact(emoji) {
+      let react = {
+        react: {
+          text: emoji,
+          key: m.key,
+        },
+      };
+      await client.sendMessage(m.chat, react);
+    }
 
 
 
@@ -647,7 +656,9 @@ break;
 case "retrieve":
 commands[command](client, m);
 break;
-
+case "ping":
+commands[command](client, m, dreadedspeed, sendReact);
+break;
 
 
 

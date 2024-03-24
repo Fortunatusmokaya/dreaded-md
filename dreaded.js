@@ -659,6 +659,12 @@ break;
 case "ping":
 commands[command](client, m, dreadedspeed, sendReact);
 break;
+case "tempmail":
+commands[command](client, m, text);
+break;
+case "tempinbox":
+commands[command](client, m, text);
+break;
 
 
 

@@ -65,6 +65,8 @@ export default async function dreaded(client, m, chatUpdate, store) {
         ? m.message.buttonsResponseMessage?.selectedButtonId || m.message.listResponseMessage?.singleSelectReply.selectedRowId || m.text
         : "";
     var budy = typeof m.text == "string" ? m.text : "";
+var msgDreaded = m.message.extendedTextMessage?.contextInfo?.quotedMessage;
+
    // leave the prefix string empty if you don't want the bot to use a prefix
 
 const mode = process.env.MODE || 'PUBLIC';

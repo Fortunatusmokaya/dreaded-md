@@ -702,6 +702,10 @@ case "toimg":
 commands[command](client, m, quoted, mime, exec, getRandom);
 break;
 
+case "take":
+commands[command](client, m, pushname, msgDreaded);
+break;
+
 
 
 case "tweet":

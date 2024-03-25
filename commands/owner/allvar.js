@@ -13,7 +13,7 @@ let baseURI = "/apps/" + appname;
 let mok = await heroku.get(baseURI+'/config-vars')
 
 let mf = '*Current Heroku Variables*\n\n'
-for (dread in mok) {
+for (let dread in mok) {
 mf+= '📝 *'+dread+'* '+'= '+mok[dread]+'\n'
 }
  m.reply(mf)

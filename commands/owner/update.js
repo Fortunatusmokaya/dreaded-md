@@ -6,6 +6,7 @@ const Update = async(client, m, text, Owner, NotOwner, herokuapi, appname) => {
 
 const heroku = new Heroku({ token: herokuapi })  
 
+const git = simpleGit();    
 await git.fetch();        
               var commits = await git.log(['main' + '..origin/' +'main']);
 

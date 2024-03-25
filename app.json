@@ -31,6 +31,11 @@
       "required": true
     },
 
+ "EVENTS": {
+      "description": "Put TRUE if you want bot to send welcome and goodbye messages",
+      "required": false
+    },
+
     "NOT_OWNER_MSG": {
       "description": "Put a message that the bot will send if a parameter that requires only owner user is violated. Example: Owner only",
       "required": false

@@ -8,7 +8,7 @@ let menuText = `BOT NAME: ${botname}\n\nMODE: ${mode}:\n\n`;
 
 
 
- let menuText += 'Categories and Commands:\n\n';
+     menuText += 'Categories and Commands:\n\n';
 
     for (const category of categories) {
       const commandFiles = fs.readdirSync(`./commands/${category}`).filter((file) => file.endsWith('.js'));

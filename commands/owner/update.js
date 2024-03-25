@@ -3,7 +3,7 @@ import Heroku from "heroku-client";
 
 const Update = async(client, m, text, Owner, NotOwner, herokuapi, appname) => {
 
-
+if (!Owner) return m.reply(NotOwner);
 const heroku = new Heroku({ token: herokuapi })  
 
 const git = simpleGit();    

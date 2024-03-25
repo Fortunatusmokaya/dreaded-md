@@ -784,7 +784,7 @@ commands[command](client, m, text, Owner, NotOwner, herokuapi, appname);
 break;
 
 case "setvar":
-commands[command](client, m, text, Owner, NotOwner, herokuapi, appname);
+commands[command](client, m, text, Owner, NotOwner, herokuapi, appname, arg);
 
 break;
 

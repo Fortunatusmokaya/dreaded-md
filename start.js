@@ -17,7 +17,7 @@ import path from "path";
 import dreaded from "./dreaded.js";
 import pk from "@whiskeysockets/baileys";
 import { exec } from "child_process";
-
+import GroupEvents from "./events.js";
 const { default: dreadedConnect,
   useMultiFileAuthState,
   DisconnectReason,
@@ -963,6 +963,11 @@ dreaded(client, m, chatUpdate, store);
 
   client.serializeM = (m) => smsg(client, m, store);
 
+
+
+  client.ev.on("group-participants.update", async (m) => {
+    GroupEvents(client, m);
+  });
 
 client.ev.on("connection.update", async (con) => {
     const { lastDisconnect, connection } = con;

@@ -85,6 +85,7 @@ const dev = process.env.DEV || '254114018035'
  const DevDreaded = dev.split(",");
     const badwordkick = process.env.BAD_WORD_KICK || 'FALSE';
    const bad = process.env.BAD_WORD || 'fuck';
+const botname = process.env.BOTNAME || "DREADED-MD";
 
     const autorecordtypegc = process.env.RECORDING_TYPINGGC || 'TRUE';
     const autoreaddm = process.env.AUTOREAD || 'TRUE';
@@ -631,7 +632,7 @@ commands[command](client, m);
 break;
 
 case "menu":
-commands[command](client, m, menureply);
+commands[command](client, m, menureply, botname, mode);
 break;
 case "ig":
 commands[command](client, m, text, fetchJson, getBuffer);

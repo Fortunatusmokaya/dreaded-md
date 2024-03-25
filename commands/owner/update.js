@@ -31,7 +31,7 @@ await git.push('heroku', 'main');
 
 await m.reply('✅ Your bot has been updated.\n\nRestarting bot...')       
                         
-
 }
+};
 
 export default Update;

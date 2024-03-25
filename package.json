@@ -41,6 +41,7 @@
     "module": "^1.2.5",
     "rsnchat": "^2.0.7",
     "readline": "latest",
+    "simple-git":"^3.23.0",
     "forever": "^4.0.3",
     "forever-monitor": "^1.5.2",
     "node-cache": "latest",

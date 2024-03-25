@@ -4,7 +4,7 @@ const getMenu = async (client, m, menureply, botname, mode) => {
   try {
     const categories = ['general', 'ai', 'coding', 'download', 'group', 'owner', 'edit'];
    
-let menuText = `BOT NAME: ${botname}\n\nMODE: ${mode}:\n\n`;
+let menuText = `\nBOTNAME: ${botname}\n\nMODE: ${mode}:\n\n`;
 
 
 

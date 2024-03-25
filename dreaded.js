@@ -771,7 +771,12 @@ break
 case "bc":
 commands[command](client, m, text, Owner, NotOwner, participants, pushname);
 
+break;
 
+case "allvar":
+commands[command](client, m, text, Owner, NotOwner, herokuapi, appname);
+
+break;
 
 
 

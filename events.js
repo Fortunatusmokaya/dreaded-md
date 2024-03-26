@@ -50,7 +50,7 @@ if (welcombye === 'TRUE') {
 
 
       } else if (Fortu.action == "demote" && antidemote === "TRUE") {
-   if (Fortu.author == metadata.owner || Fortu.author == Myself || Fortu.author == Fortu.participants[0]) {  await client.sendMessage(Fortu.id, { text: `A super user has demoted @${(Fortu.participants[0]).split("@")[0]}`, mentions : [Fortu.participants[0]]}) ;return ;};
+   if (Fortu.author == metadata.owner || Fortu.author == Myself || Fortu.author == Fortu.participants[0]) return;
 
 await  client.groupParticipantsUpdate(Fortu.id ,[Fortu.author],"demote") ;
        await client.groupParticipantsUpdate(Fortu.id , [Fortu.participants[0]] , "promote")
@@ -63,7 +63,7 @@ client.sendMessage(
                 }
            )
 }  else if (Fortu.action == "promote" && antipromote === "TRUE") {
-   if (Fortu.author == metadata.owner || Fortu.author == Myself || Fortu.author == Fortu.participants[0]) {  await client.sendMessage(Fortu.id, { text: `A super user has promoted @${(Fortu.participants[0]).split("@")[0]}`, mentions : [Fortu.participants[0]]}) ;return ;};
+   if (Fortu.author == metadata.owner || Fortu.author == Myself || Fortu.author == Fortu.participants[0]) return;
 
 await   client.groupParticipantsUpdate(Fortu.id ,[Fortu.author,Fortu.participants[0]],"demote");
 

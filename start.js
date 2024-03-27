@@ -5,7 +5,7 @@
 
  import { createRequire } from 'module';
 import pino from "pino";
-import { Boom } from "@hapi/boom";
+import boom_1 from "@hapi/boom";
 import fs from "fs";
 import axios from "axios";
 import { readFileSync } from "fs"; // Update to use specific function from fs

@@ -647,6 +647,10 @@ break;
 case "script":
 commands[command](client, m, sendd);
 break;
+
+case "uptime":
+commands[command](client, m, sendd, runtime);
+break;
 case "screenshot":
 commands[command](client, m, text, ssweb, sendd);
 break;

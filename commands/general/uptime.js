@@ -5,7 +5,7 @@ const Uptime = async(client, m, sendd, runtime) => {
 
 
 
-await sendd(`${runtime(process.uptime())});
+await sendd(`${runtime(process.uptime())}`);
 
 
 }

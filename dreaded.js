@@ -70,7 +70,7 @@ var msgDreaded = m.message.extendedTextMessage?.contextInfo?.quotedMessage;
    // leave the prefix string empty if you don't want the bot to use a prefix
 
 const mode = process.env.MODE || 'PUBLIC';
-const author = process.env.STICKER_AUTHOR || 'fortunatus';
+const author = process.env.STICKER_AUTHOR || 'dus';
     const prefix = process.env.PREFIX || '';
 const mycode = process.env.COUNTRY_CODE || '254';
     const cmd = body.startsWith(prefix);
@@ -80,12 +80,12 @@ const admin = process.env.ADMIN_MSG || 'Are you an admin?';
     const NotOwner = process.env.NOT_OWNER_MSG || 'Are you the owner?';
 const appname = process.env.APP_NAME;
 const herokuapi = process.env.HEROKU_API;
-    const packname = process.env.STICKER_PACKNAME || 'dreaded';
-const dev = process.env.DEV || '254114018035'
+    const packname = process.env.STICKER_PACKNAME || 'dustech';
+const dev = process.env.DEV || '254103872244'
  const DevDreaded = dev.split(",");
     const badwordkick = process.env.BAD_WORD_KICK || 'FALSE';
-   const bad = process.env.BAD_WORD || 'fuck';
-const botname = process.env.BOTNAME || "DREADED-MD";
+   const bad = process.env.BAD_WORD || 'fuck,mama,mamako,pussy';
+const botname = process.env.BOTNAME || "DUS.TECH";
 
     const autorecordtypegc = process.env.RECORDING_TYPINGGC || 'TRUE';
     const autoreaddm = process.env.AUTOREAD || 'TRUE';
@@ -156,13 +156,13 @@ const audiovn = "./alive.mp3";
         mimetype: 'audio/mp4',
         ptt: true,
         waveform:  [100, 0, 100, 0, 100, 0, 100],
-        fileName: "Dreaded",
+        fileName: "Dustech",
 
         contextInfo: {
           mentionedJid: [m.sender],
           externalAdReply: {
           title: "Hi human, I am Alive",
-          body: "DREADED BOT",
+          body: "Dussy BOT",
           thumbnailUrl: "https://telegra.ph/file/a5147a64a5b91d8cf945c.jpg",
           sourceUrl: '',
           mediaType: 1,

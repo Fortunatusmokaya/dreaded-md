@@ -12,7 +12,7 @@ if (!text.includes('mediafire.com')) {
 
 await m.reply(`A moment...`);
 
-try {
+
       
         const fileInfo = await MediaFire(text);
 
@@ -31,11 +31,7 @@ try {
             },
             { quoted: m }
         );
-    } catch (error) {
-        
-     
-        m.reply(`Something went wrong: ${error.message}`);
-    }
+    
 }
 
 export default mediaf;

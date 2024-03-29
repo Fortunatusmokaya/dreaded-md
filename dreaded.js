@@ -721,6 +721,10 @@ case "mediafire":
 commands[command](client, m, text, MediaFire, isUrl);
 break;
 
+case "video":
+commands[command](client, m, text);
+break;
+
 
 
 //edit

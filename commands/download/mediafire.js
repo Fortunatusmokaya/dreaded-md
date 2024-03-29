@@ -16,7 +16,9 @@ await m.reply(`A moment...`);
       
         const fileInfo = await MediaFire(text);
 
-       
+       console.log("File info:", fileInfo);
+
+
 
        
         await client.sendMessage(

@@ -5,7 +5,7 @@ const mediaf = async (client, m, text, MediaFire, isUrl) => {
 
 if (!text) return m.reply("provide mediafire link for download");
 
-if (!isUrl(text) && !text.includes('mediafire.com')) {
+if (!text.includes('mediafire.com')) {
         return m.reply(`Doesnt look like a mediafire link, uh?`);
     }
 

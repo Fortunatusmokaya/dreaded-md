@@ -17,9 +17,6 @@ try {
         const fileInfo = await MediaFire(text);
 
        
-        if (fileInfo[0].size.split('MB')[0] >= 100) {
-            return m.reply('File is too big...');
-        }
 
        
         await client.sendMessage(

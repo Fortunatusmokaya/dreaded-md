@@ -618,13 +618,8 @@ case "revoke":
 commands[command](client, m, group, admin, isAdmin, botAdmin, isBotAdmin, groupMetadata);
 break;
 case "foreigners":
-commands[command](client, m, admin, isAdmin, group, botAdmin, isBotAdmin, participants);
-break
-
-
-
-
-        break;
+commands[command](client, m, admin, isAdmin, group, botAdmin, isBotAdmin, participants, args, mycode);
+break;
 
 // general commands
 

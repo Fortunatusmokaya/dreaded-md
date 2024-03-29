@@ -627,6 +627,11 @@ break
         break;
 
 // general commands
+
+
+case "poll":
+commands[command](client, m, text);
+break;
 case "credits":
 commands[command](client, m);
 break;

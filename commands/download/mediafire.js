@@ -12,11 +12,17 @@ if (!text.includes('mediafire.com')) {
 
 await m.reply(`A moment...`);
 
-
+try {
       
         const fileInfo = await MediaFire(text);
 
-       console.log("File info:", fileInfo);
+    
+
+if (!fileInfo || !fileInfo.length) {
+    return m.reply("Sorry, this file is no longer stored in mediafire.");
+}
+
+
 
 
 
@@ -32,7 +38,15 @@ await m.reply(`A moment...`);
                 caption: `${fileInfo[0].nama} downloaded by ${botname}`, 
             },
             { quoted: m }
-        );
+     
+
+   );
+
+} catch (error) {
+        
+     
+        m.reply(`Something went wrong:\n\n${error.message}`);
+    }
     
 }
 

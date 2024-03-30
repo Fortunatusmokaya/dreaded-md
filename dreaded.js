@@ -67,7 +67,7 @@ export default async function dreaded(client, m, chatUpdate, store) {
     var budy = typeof m.text == "string" ? m.text : "";
 var msgDreaded = m.message.extendedTextMessage?.contextInfo?.quotedMessage;
 
-/* 
+
 const loadCmds = async (category) => {
   const commandFil = fs.readdirSync(`./commands/${categor}`).filter((plugin) => plugin.endsWith(".js"));
 
@@ -81,17 +81,17 @@ const commandCategories = ["general", "group", "owner", "ai", "coding", "downloa
 const commandNam = [];
 
 for (const categor of commandCategories) {
-  const commandFiles = fs.readdirSync(`./commands/${categor}`).filter((plugin) => plugin.endsWith(".js"));
+  const commandFila = fs.readdirSync(`./commands/${categor}`).filter((plugin) => plugin.endsWith(".js"));
   
-  for (const file of commandFil) {
-    const commandName = file.slice(0, -3);
+  for (const fil of commandFila) {
+    const commandName = fil.slice(0, -3);
     commandNam.push(commandName);
   }
 } 
 
 const comandd = commandNam.some(name => body.includes(name));
 
-*/
+
 
 
    // leave the prefix string empty if you don't want the bot to use a prefix

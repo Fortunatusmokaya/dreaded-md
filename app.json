@@ -75,6 +75,12 @@
       "required": false
     },
 
+"ANTIFOREIGN": {
+      "description": "Put TRUE if you want bot to remove numbers which do not include your set COUNTRY_CODE.",
+"value": "TRUE",
+      "required": true
+    },
+
 "ANTITAG": {
       "description": "Put TRUE if you want bot to remove members tagging or hidetagging",
 "value": "FALSE",
@@ -135,8 +141,8 @@
     },
 
 "COUNTRY_CODE": {
-      "description": "Enter your country code without +. Example: 254 for Kenya.",
-      "required": false
+      "description": "Enter your country code without +. Example: 254 for Kenya. This will allow bot to detect and remove foreigners if commanded",
+      "required": true
     },
 
 

@@ -921,10 +921,10 @@ commands[command](client, m, text, Owner, NotOwner, herokuapi, appname, arg);
 
 break;
 case "block":
-commands[command](client, m, Owner, NotOwner);
+commands[command](client, m, Owner, NotOwner, text);
 break;
 case "unblock":
-commands[command](client, m, Owner, NotOwner);
+commands[command](client, m, Owner, NotOwner, text);
 
 break
 

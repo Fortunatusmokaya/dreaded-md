@@ -920,8 +920,13 @@ case "setvar":
 commands[command](client, m, text, Owner, NotOwner, herokuapi, appname, arg);
 
 break;
+case "block":
+commands[command](client, m, Owner, NotOwner);
+break;
+case "unblock":
+commands[command](client, m, Owner, NotOwner);
 
-
+break
 
 
 

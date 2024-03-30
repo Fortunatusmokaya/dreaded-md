@@ -371,13 +371,22 @@ function _0x3a27() {
 const dreadedOwner = m.sender == ownerJid ? true : false;
 
 
+const Blocked = await client.fetchBlocklist();
+
+
+if (cmd && Blocked.includes(sender)) { return
+
+await sendReact("❌")
+
+await reply("You are blocked from using bot commands, might wanna have to contact the owner to be unblocked eh?")
+}
 
  const timestamp = speed(); 
    const dreadedspeed = speed() - timestamp 
 
 
 if (budy.startsWith(',')) {
-  if (!Owner) return reply("Only owner")
+  if (!Owner) return reply("Only owner can evaluate baileys codes")
   try {
 let evaled = await eval(budy.slice(2));
 

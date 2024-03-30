@@ -89,7 +89,6 @@ for (const categor of commandCategories) {
   }
 } 
 
-const comandd = commandNam.some(name => body.includes(name));
 
 
 
@@ -100,7 +99,7 @@ const mode = process.env.MODE || 'PUBLIC';
 const author = process.env.STICKER_AUTHOR || 'fortunatus';
     const prefix = process.env.PREFIX || '';
 const mycode = process.env.COUNTRY_CODE || '254';
-    const cmd = body.startsWith(prefix);
+    const cmd = commandNam.some(name => body.includes(name)) && body.startsWith(prefix);
 const admin = process.env.ADMIN_MSG || 'Are you an admin?';
     const group = process.env.GROUP_ONLY_MSG || 'This a not a group chat';
     const botAdmin = process.env.BOT_ADMIN_MSG || 'Am I an admin?'

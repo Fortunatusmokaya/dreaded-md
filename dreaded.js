@@ -947,7 +947,7 @@ break
       }
     }
   } catch (err) {
-   client.sendText('254114018035' + '@s.whatsapp.net', `ERROR LOG ⚙️\n\nSender: ${m.sender}\nUsername: ${m.pushName}\nOrigin: ${m.chat}\n\nError details: ${util.format(err)}`, m)
+   
         console.log(util.format(err))
   }
 };

@@ -371,14 +371,17 @@ function _0x3a27() {
 const dreadedOwner = m.sender == ownerJid ? true : false;
 
 
-const Blocked = await client.fetchBlocklist();
-
-if (m.isGroup && cmd && Blocked.includes(sender)) {
-    await reply("You are blocked from using bot commands. You might want to contact the owner to be unblocked.");
+if (body.startsWith(prefix) && !commandNam.some(name => body.includes(name))) {
     await sendReact("❌");
-    return;
+await m.reply(`Wrong command, Type ${prefix}menu to see the help list eh?`)
+return;
 }
 
+const Blocked = await client.fetchBlocklist();
+
+if (m.isGroup && cmd && Blocked.includes(sender)) return reply("You are blocked from using bot commands. You might want to contact the owner to be unblocked.");
+    // await sendReact("❌");
+    
 
  const timestamp = speed(); 
    const dreadedspeed = speed() - timestamp 

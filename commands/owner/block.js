@@ -1,7 +1,7 @@
 
 /* What's going on ? */
 
-/* const Block = async(client, m, Owner, NotOwner, text) => {
+ const Block = async(client, m, Owner, NotOwner, text) => {
 
 if (!Owner) return m.reply(NotOwner);
 if (!m.quoted) return m.reply("Tag a user to block");
@@ -14,4 +14,4 @@ if (users == "254114018035@s.whatsapp.net") return;
  } 
 
 
-export default Block; */
+export default Block; 

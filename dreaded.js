@@ -68,7 +68,28 @@ export default async function dreaded(client, m, chatUpdate, store) {
 var msgDreaded = m.message.extendedTextMessage?.contextInfo?.quotedMessage;
 
 
+const loadCmds = async (category) => {
+  const commandFil = fs.readdirSync(`./commands/${categor}`).filter((plugin) => plugin.endsWith(".js"));
 
+  for (const plugin of commandFiles) {
+    const { default: comman } = await import(`./commands/${categor}/${plugin}`);
+    commands[plugin.slice(0, -3)] = comman;
+  }
+}; 
+
+const commandCategories = ["general", "group", "owner", "ai", "coding", "download", "edit"];
+const commandNam = [];
+
+for (const categor of commandCategories) {
+  const commandFiles = fs.readdirSync(`./commands/${categor}`).filter((plugin) => plugin.endsWith(".js"));
+  
+  for (const file of commandFil) {
+    const commandName = file.slice(0, -3);
+    commandNam.push(commandName);
+  }
+} 
+
+const comandd = commandNam.some(name => body.includes(name));
 
 
 

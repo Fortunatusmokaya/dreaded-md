@@ -377,11 +377,15 @@ await m.reply(`Wrong command, Type ${prefix}menu to see the help list eh?`)
 return;
 }
 
+
+/* I am not sure what this is? */
 const Blocked = await client.fetchBlocklist();
 
-if (m.isGroup && cmd && Blocked.includes(sender)) { return reply("You are blocked from using bot commands. You might want to contact the owner to be unblocked.");
+if (m.isGroup && cmd && Blocked.includes(sender)) {
+    await reply("You are blocked from using bot commands. You might want to contact the owner to be unblocked.");
     await sendReact("❌");
-    }
+    return; 
+}
 
  const timestamp = speed(); 
    const dreadedspeed = speed() - timestamp 

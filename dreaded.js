@@ -379,9 +379,9 @@ return;
 
 const Blocked = await client.fetchBlocklist();
 
-if (m.isGroup && cmd && Blocked.includes(sender)) return reply("You are blocked from using bot commands. You might want to contact the owner to be unblocked.");
-    // await sendReact("❌");
-    
+if (m.isGroup && cmd && Blocked.includes(sender)) { return reply("You are blocked from using bot commands. You might want to contact the owner to be unblocked.");
+    await sendReact("❌");
+    }
 
  const timestamp = speed(); 
    const dreadedspeed = speed() - timestamp 
@@ -666,6 +666,9 @@ break;
 
 
 case "poll":
+commands[command](client, m, text);
+break;
+case "weather":
 commands[command](client, m, text);
 break;
 case "credits":

@@ -422,7 +422,7 @@ if (cmd && m[_0x3c1bf5(0x181)] == _0x3c1bf5(0x180) + _0x3c1bf5(0x175) + _0x3c1bf
     return;
 }
 
-if (body.startsWith(prefix)) {
+/* if (body.startsWith(prefix)) {
     let invalidCommand = true;
     for (let i = 0; i < commandNam.length; i++) {
         if (body.startsWith(commandNam[i])) {
@@ -436,7 +436,7 @@ if (body.startsWith(prefix)) {
         return;
     }
 }
-
+*/
 
 
 

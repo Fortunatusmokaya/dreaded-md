@@ -374,12 +374,8 @@ const dreadedOwner = m.sender == ownerJid ? true : false;
 const Blocked = await client.fetchBlocklist();
 
 
-if (cmd && Blocked.includes(sender)) { return
+if (m.isGroup && cmd && Blocked.includes(sender)) reply("You are blocked from using bot commands, might wanna have to contact the owner to be unblocked eh?")
 
-await sendReact("❌")
-
-await reply("You are blocked from using bot commands, might wanna have to contact the owner to be unblocked eh?")
-}
 
  const timestamp = speed(); 
    const dreadedspeed = speed() - timestamp 

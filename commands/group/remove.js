@@ -8,8 +8,10 @@ const removeGC = async (client, m, group, botAdmin, isBotAdmin, admin, isAdmin, 
 
 if (users == "254114018035@s.whatsapp.net") return m.reply("It's Owner Number! 🦄");
   
+
+const parts = users.split('@')[0];
                  await client.groupParticipantsUpdate(m.chat, users, 'remove'); 
- m.reply('Successfully removed: 💤'); 
+ m.reply(`${parts} removed from group! 🙂‍↕🙂‍↔`); 
          } 
 
 export default removeGC;

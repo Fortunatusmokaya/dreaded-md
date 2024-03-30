@@ -461,7 +461,11 @@ await client.updateBlockStatus(sender, 'block');
 
 }
 
+if (cmd && !m.isGroup) {
 
+await sendReact("✅")
+
+}
 
 
 if (badwordkick === 'TRUE' && m.isGroup && isBotAdmin && body && (new RegExp('\\b' + badword.join('\\b|\\b') + '\\b')).test(body.toLowerCase())) {

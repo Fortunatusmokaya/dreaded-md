@@ -3,7 +3,7 @@ import fs from "fs";
 const menu = process.env.MENUTYPE || 'LINK';
 const menuimage = process.env.MENULINK || 'https://telegra.ph/file/d6dab955fbaa42fce2280.jpg';
 
-const getMenu = async (client, m, menureply, botname, mode, video, pict) => {
+const getMenu = async (client, m, menureply, botname, mode, video, pict, pushname) => {
   try {
     const categories = ['general', 'ai', 'coding', 'download', 'group', 'owner', 'edit'];
    
@@ -46,7 +46,7 @@ client.sendMessage(m.chat, {
                             externalAdReply: {
                                 showAdAttribution: true,
                                 title: `DREADED-MD`,
-                                body: `fff`,
+                                body: `Hi ${pushname}`,
                                 thumbnail: pict,
                                 sourceUrl: ``,
                                 mediaType: 1,

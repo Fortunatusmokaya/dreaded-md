@@ -22,7 +22,7 @@
        "PREFIX":
     {
       "description":"choose your prefix for dreaded. To prevent errors and confusion you must set a prefix",
-      "value".",
+      "value": ".",
       "required":true
     },
 

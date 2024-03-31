@@ -21,9 +21,9 @@
   "env": {
        "PREFIX":
     {
-      "description":"choose your prefix for dreaded",
-      "value":"",
-      "required":false
+      "description":"choose your prefix for dreaded. To prevent errors and confusion you must set a prefix",
+      "value".",
+      "required":true
     },
 
     "DEV": {

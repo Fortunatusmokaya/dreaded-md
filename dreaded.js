@@ -430,7 +430,7 @@ return;
 }
 
 
-if (body.startsWith(prefix) && !commandName.some(name => body.substring(prefix.length).startsWith(name))) {
+if (body.startsWith(prefix) && !commandNam.some(name => body.substring(prefix.length).startsWith(name))) {
     await sendReact("❌");
     await m.reply(`Wrong command, Type ${prefix}menu to see the help list eh?`);
     return;

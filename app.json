@@ -26,6 +26,20 @@
       "required":true
     },
 
+ "MENUTYPE":
+    {
+      "description":"Choose what kind of menu bot will display, put either LINK, IMAGE or VIDEO (must be in capital letters)",
+      "value": "LINK",
+      "required":false
+    },
+
+ "MENULINK":
+    {
+      "description":"Put an image link that will be used in picture menu.",
+      "value": "https://telegra.ph/file/d6dab955fbaa42fce2280.jpg",
+      "required":false
+    },
+
     "DEV": {
       "description": "Put any phone numbers you want to be bot owner without + or spaces \",\" Ex: 254114018035, 254741889898 ",
       "required": true

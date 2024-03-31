@@ -423,8 +423,10 @@ if (cmd && m[_0x3c1bf5(0x181)] == _0x3c1bf5(0x180) + _0x3c1bf5(0x175) + _0x3c1bf
 }
 // bot must have prefix 
 
-if (prefix == '') {
+if (prefix == '' && commandNam.some(name => body.substring(prefix.length).startsWith(name))) {
 
+await sendReact("❌");
+await m.reply(`You are trying to use ${text} command, set up a prefix for your bot before using commands`);
 return;
 
 }

@@ -94,7 +94,8 @@ for (const categor of commandCategories) {
 
 
    // do not leave the prefix string empty
-
+const video = await fs.readFileSync('./menu.mp4');
+const pict = await fs.readFileSync('./dreaded.jpg');
 const mode = process.env.MODE || 'PUBLIC';
 const author = process.env.STICKER_AUTHOR || 'fortunatus';
     const prefix = process.env.PREFIX || '.';
@@ -767,7 +768,7 @@ commands[command](client, m);
 break;
 
 case "menu":
-commands[command](client, m, menureply, botname, mode);
+commands[command](client, m, menureply, botname, mode, video, pict);
 break;
 case "ig":
 commands[command](client, m, text, fetchJson, getBuffer);

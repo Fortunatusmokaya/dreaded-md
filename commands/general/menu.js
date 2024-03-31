@@ -45,7 +45,7 @@ client.sendMessage(m.chat, {
                         contextInfo: {
                             externalAdReply: {
                                 showAdAttribution: true,
-                                title: `DREADED-MD`,
+                                title: botname,
                                 body: `Hi ${pushname}`,
                                 thumbnail: pict,
                                 sourceUrl: ``,

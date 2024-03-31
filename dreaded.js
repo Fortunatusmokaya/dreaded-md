@@ -827,6 +827,10 @@ case "gpt":
 commands[command](client, m, text, sendd);
 break;
 
+case "imagine":
+commands[command](client, m, text);
+break;
+
 case "ai":
 commands[command](client, m, text, qmsg, mime, UploadFileUgu, TelegraPh);
 

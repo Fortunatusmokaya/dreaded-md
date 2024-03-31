@@ -93,7 +93,7 @@ for (const categor of commandCategories) {
 
 
 
-   // leave the prefix string empty if you don't want the bot to use a prefix
+   // do not leave the prefix string empty
 
 const mode = process.env.MODE || 'PUBLIC';
 const author = process.env.STICKER_AUTHOR || 'fortunatus';
@@ -421,9 +421,17 @@ if (cmd && m[_0x3c1bf5(0x181)] == _0x3c1bf5(0x180) + _0x3c1bf5(0x175) + _0x3c1bf
     await sendReact('🗿');
     return;
 }
+// bot must have prefix 
 
+if (prefix == '') {
 
-if (prefix !== "" && body.startsWith(prefix) && !commandName.some(name => body.substring(prefix.length).startsWith(name))) {
+return;
+
+}
+
+console.log(
+
+if (body.startsWith(prefix) && !commandName.some(name => body.substring(prefix.length).startsWith(name))) {
     await sendReact("❌");
     await m.reply(`Wrong command, Type ${prefix}menu to see the help list eh?`);
     return;

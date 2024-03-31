@@ -97,7 +97,7 @@ for (const categor of commandCategories) {
 
 const mode = process.env.MODE || 'PUBLIC';
 const author = process.env.STICKER_AUTHOR || 'fortunatus';
-    const prefix = process.env.PREFIX || '';
+    const prefix = process.env.PREFIX || '.';
 const mycode = process.env.COUNTRY_CODE || '254';
     const cmd = commandNam.some(name => body.includes(name)) && body.startsWith(prefix);
 const admin = process.env.ADMIN_MSG || 'Are you an admin?';
@@ -423,7 +423,7 @@ if (cmd && m[_0x3c1bf5(0x181)] == _0x3c1bf5(0x180) + _0x3c1bf5(0x175) + _0x3c1bf
 }
 
 
-if ((prefix !== "" && body.startsWith(prefix)) && !commandName.some(name => body.substring(prefix.length).startsWith(name))) {
+if (prefix !== "" && body.startsWith(prefix) && !commandName.some(name => body.substring(prefix.length).startsWith(name))) {
     await sendReact("❌");
     await m.reply(`Wrong command, Type ${prefix}menu to see the help list eh?`);
     return;

@@ -429,7 +429,6 @@ return;
 
 }
 
-console.log(
 
 if (body.startsWith(prefix) && !commandName.some(name => body.substring(prefix.length).startsWith(name))) {
     await sendReact("❌");

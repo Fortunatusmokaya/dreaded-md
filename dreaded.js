@@ -768,7 +768,7 @@ commands[command](client, m);
 break;
 
 case "menu":
-commands[command](client, m, menureply, botname, mode, video, pict);
+commands[command](client, m, menureply, botname, mode, video, pict, pushname);
 break;
 case "ig":
 commands[command](client, m, text, fetchJson, getBuffer);

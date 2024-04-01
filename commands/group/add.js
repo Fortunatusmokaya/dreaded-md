@@ -35,7 +35,7 @@ const users = (await Promise.all(
   });
 
 
-const pp = await client.profilePictureUrl(m.chat).catch((_) => "https://telegra.ph/file/9f1c508cf099eefc331f7.jpg");
+const pp = await client.profilePictureUrl(m.chat, 'image').catch((_) => "https://telegra.ph/file/9f1c508cf099eefc331f7.jpg");
 let jpegThumbnail = Buffer.alloc(0);
 
 if (pp) {

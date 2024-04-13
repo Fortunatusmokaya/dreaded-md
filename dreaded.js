@@ -828,6 +828,10 @@ case "gpt":
 commands[command](client, m, text);
 break;
 
+case "ai2":
+commands[command](client, m, text, qmsg, mime, UploadFileUgu, TelegraPh);
+break;
+
 case "gpt4":
 commands[command](client, m, text, sendd, fetchJson);
 break;

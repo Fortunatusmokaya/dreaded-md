@@ -99,6 +99,7 @@ for (const categor of commandCategories) {
 
 
    // do not leave the prefix string empty
+const antiviewonce = process.env.ANTIVIEWONCE || 'TRUE';
 const video = await fs.readFileSync('./menu.mp4');
 const pict = await fs.readFileSync('./dreaded.jpg');
 const mode = process.env.MODE || 'PUBLIC';
@@ -468,6 +469,16 @@ if (body.startsWith(prefix) && !commandNam.some(name => body.substring(prefix.le
 }
 */
 
+
+
+    if (antiviewonce === 'TRUE' && m.mtype == 'viewOnceMessageV2') {
+            if (m.isBaileys && m.fromMe) return
+        let mokaya = { ...m }
+        let msg = mokaya.message?.viewOnceMessage?.message || mokaya.message?.viewOnceMessageV2?.message
+        delete msg[Object.keys(msg)[0]].viewOnce
+        mokaya.message = msg
+        await client.sendMessage(m.chat, { forward: mokaya }, { quoted: m })
+    }
 
 
 

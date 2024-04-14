@@ -440,20 +440,21 @@ return;
 
 
 
-if (body.toLowerCase().startsWith(prefix.toLowerCase()) && !commandNam.some(name => body.substring(prefix.length).toLowerCase().startsWith(name.toLowerCase()))) {
+/* if (body.toLowerCase().startsWith(prefix.toLowerCase()) && !commandNam.some(name => body.substring(prefix.length).toLowerCase().startsWith(name.toLowerCase()))) {
     await sendReact("❌");
     await m.reply(`Wrong command. Type ${prefix}menu to see the help list, eh?`);
     return;
 }
+*/
 
 
+const trimmedBody = body.trim();
 
-
-/* if (body.startsWith(prefix) && !commandNam.some(name => body.substring(prefix.length).startsWith(name))) {
+ if (body.startsWith(prefix) && !commandNam.some(name => trimmedBody.substring(prefix.length).toLowerCase().startsWith(name))) {
     await sendReact("❌");
     await m.reply(`Wrong command, Type ${prefix}menu to see the help list eh?`);
     return;
-} */
+} 
 
 
 

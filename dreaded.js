@@ -440,29 +440,22 @@ return;
 
 
 
-/* if (body.toLowerCase().startsWith(prefix.toLowerCase()) && !commandNam.some(name => body.substring(prefix.length).toLowerCase().startsWith(name.toLowerCase()))) {
-    await sendReact("❌");
-    await m.reply(`Wrong command. Type ${prefix}menu to see the help list, eh?`);
-    return;
-}
-*/
+
 
 const trimmedBody = body.trim();
 
 if (
     body.startsWith(prefix) &&
     !commandNam.some(name => {
-        const trimmedName = name.toLowerCase().trim(); // Convert command name to lowercase and trim spaces
         const userInput = trimmedBody.substring(prefix.length).toLowerCase().trim(); // Convert user input to lowercase and trim spaces
 
-        return userInput.startsWith(trimmedName);
+        return userInput.startsWith(name);
     })
 ) {
     await sendReact("❌");
-    await m.reply(`Wrong command, Type ${prefix}menu to see the help list eh?`);
+    await m.reply(`Wrong command. Type ${prefix}menu to see the help list, eh?`);
     return;
 }
-
 
 /* const trimmedBody = body.trim();
 

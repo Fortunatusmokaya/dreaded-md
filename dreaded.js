@@ -447,14 +447,31 @@ return;
 }
 */
 
-
 const trimmedBody = body.trim();
+
+if (
+    body.startsWith(prefix) &&
+    !commandNam.some(name => {
+        const trimmedName = name.toLowerCase().trim(); // Convert command name to lowercase and trim spaces
+        const userInput = trimmedBody.substring(prefix.length).toLowerCase().trim(); 
+        
+        
+        return userInput.startsWith(trimmedName);
+    })
+) {
+    await sendReact("❌");
+    await m.reply(`Wrong command, Type ${prefix}menu to see the help list eh?`);
+    return;
+}
+
+
+/* const trimmedBody = body.trim();
 
  if (body.startsWith(prefix) && !commandNam.some(name => trimmedBody.substring(prefix.length).toLowerCase().startsWith(name))) {
     await sendReact("❌");
     await m.reply(`Wrong command, Type ${prefix}menu to see the help list eh?`);
     return;
-} 
+} */
 
 
 

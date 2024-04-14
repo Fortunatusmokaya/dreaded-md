@@ -447,16 +447,15 @@ const trimmedBody = body.trim();
 if (
     body.startsWith(prefix) &&
     !commandNam.some(name => {
-        const userInput = trimmedBody.substring(prefix.length).toLowerCase().trim(); // Convert user input to lowercase and trim spaces
+        const userInput = trimmedBody.substring(prefix.length).toLowerCase().trim();
 
-        return userInput.startsWith(name);
+        return userInput.includes(name.toLowerCase());
     })
 ) {
     await sendReact("❌");
     await m.reply(`Wrong command. Type ${prefix}menu to see the help list, eh?`);
     return;
 }
-
 /* const trimmedBody = body.trim();
 
  if (body.startsWith(prefix) && !commandNam.some(name => trimmedBody.substring(prefix.length).toLowerCase().startsWith(name))) {

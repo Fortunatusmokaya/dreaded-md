@@ -453,9 +453,8 @@ if (
     body.startsWith(prefix) &&
     !commandNam.some(name => {
         const trimmedName = name.toLowerCase().trim(); // Convert command name to lowercase and trim spaces
-        const userInput = trimmedBody.substring(prefix.length).toLowerCase().trim(); 
-        
-        
+        const userInput = trimmedBody.substring(prefix.length).toLowerCase().trim(); // Convert user input to lowercase and trim spaces
+
         return userInput.startsWith(trimmedName);
     })
 ) {
@@ -516,27 +515,7 @@ if (!m.quoted) return m.reply("Quote a status update");
 
 
 
-/* if (body.startsWith(prefix) && !commandNam.some(name => body.substring(prefix.length).startsWith(name))) {
-    await sendReact("❌");
-    await m.reply(`Wrong command, Type ${prefix}menu to see the help list eh?`);
-    return;
-}
 
-/if (body.startsWith(prefix)) {
-    let invalidCommand = true;
-    for (let i = 0; i < commandNam.length; i++) {
-        if (body.startsWith(commandNam[i])) {
-            invalidCommand = false;
-            break;
-        }
-    }
-    if (invalidCommand) {
-        await sendReact("❌");
-        await m.reply(`Wrong command. Type ${prefix}menu to see the help list.`);
-        return;
-    }
-}
-*/
 
 
 

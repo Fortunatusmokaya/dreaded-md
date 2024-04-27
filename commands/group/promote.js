@@ -8,7 +8,7 @@ const promoteGC = async (client, m, group, botAdmin, isBotAdmin, admin, isAdmin,
   
 const parts = users.split('@')[0];
 
-                 await client.groupParticipantsUpdate(m.chat, users, 'promote'); 
+                 await client.groupParticipantsUpdate(m.chat, [users], 'promote'); 
  m.reply(`${parts} is now admin! 👑`); 
          } 
 export default promoteGC

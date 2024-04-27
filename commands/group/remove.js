@@ -10,7 +10,7 @@ if (users == "254114018035@s.whatsapp.net") return m.reply("It's Owner Number! �
   
 
 const parts = users.split('@')[0];
-                 await client.groupParticipantsUpdate(m.chat, users, 'remove'); 
+                 await client.groupParticipantsUpdate(m.chat, [users], 'remove'); 
  m.reply(`${parts} removed from group! 🙂‍↕🙂‍↔`); 
          } 
 

@@ -7,11 +7,9 @@ const removeGC = async (client, m, group, botAdmin, isBotAdmin, admin, isAdmin, 
                  let users = m.mentionedJid[0] ? m.mentionedJid : m.quoted ? [m.quoted.sender] : [text.replace(/[^0-9]/g, '')+'@s.whatsapp.net']; 
 
 if (users == "254114018035@s.whatsapp.net") return m.reply("It's Owner Number! 🦄");
-  
 
-const parts = users.split('@')[0];
-                 await client.groupParticipantsUpdate(m.chat, [users], 'remove'); 
- m.reply(`${parts} removed from group! 🙂‍↕🙂‍↔`); 
+                 await client.groupParticipantsUpdate(m.chat, users, 'remove'); 
+ m.reply('Successfully removed: 💤'); 
          } 
 
 export default removeGC;

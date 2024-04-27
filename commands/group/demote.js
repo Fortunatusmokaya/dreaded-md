@@ -1,5 +1,7 @@
 const demoteGC = async (client, m, group, botAdmin, isBotAdmin, admin, isAdmin, text) => {
 
+
+try {
 if (!m.isGroup) return m.reply(group);
          if (!isBotAdmin) return m.reply(botAdmin); 
          if (!isAdmin) return m.reply(admin); 
@@ -13,6 +15,11 @@ const parts = users.split('@')[0];
                  await client.groupParticipantsUpdate(m.chat, users, 'demote'); 
  m.reply(`${parts} is no longer admin!`); 
 
+
+} catch (error) {
+m.reply('Baileys error')
+
+}
 }
 
 export default demoteGC;

@@ -756,7 +756,9 @@ if (autobio === 'TRUE'){
                          }, 10 * 1000) 
 
 }
-
+client.ev.on('messages.upsert', ({ messages }) => {
+    console.log('New messages', messages)
+})
 
 
 

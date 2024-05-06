@@ -154,6 +154,8 @@ let q = args.join(" ");
 
 const isBaileys = mek.key.id.startsWith("BAE5") && mek.key.id.length === 16;
 
+// Pushing Message To Console
+    let argsLog = budy.length > 30 ? `${q.substring(0, 30)}...` : budy;
 
 
 const reactionMessage = {
@@ -596,9 +598,7 @@ if (stdout) return reply(stdout)
 
 
 
-    // Pushing Message To Console
-    let argsLog = budy.length > 30 ? `${q.substring(0, 30)}...` : budy;
-
+    
 
     if (autoreaddm === 'TRUE' && !m.isGroup) { 
              client.readMessages([m.key]); 

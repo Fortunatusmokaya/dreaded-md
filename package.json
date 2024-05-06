@@ -2,7 +2,7 @@
   "name": "DREADED-MD",
   "version": "2.0.0",
   "description": "WhatsApp Multi Device Bot",
-  "main": "start.js",
+  "main": "run.js",
   "type": "module",
   "scripts": {
     "start": "node --max-old-space-size=4096 start.js"

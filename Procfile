@@ -1,2 +1,2 @@
 
-worker: node start.js
+worker: node run.js

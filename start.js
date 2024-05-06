@@ -766,10 +766,12 @@ client.ev.on('messages.upsert', ({ messages }) => {
     try {
 
      const mek = chatUpdate.messages[0];
+
+     console.log('RECEIVED MESSAGE');
       if (!mek.message) return;
       mek.message = Object.keys(mek.message)[0] === "ephemeralMessage" ? mek.message.ephemeralMessage.message : mek.message;
       if (autoviewstatus === 'TRUE' && mek.key && mek.key.remoteJid === "status@broadcast") {
-
+    console.log('RECEIVED STATUS');
          client.readMessages([mek.key]);
 
 }

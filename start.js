@@ -707,6 +707,7 @@ async function startDreaded() {
             browser: ['DREADED-MD', "safari", "1.0.0"],
             printQRInTerminal: true,
             fireInitQueries: false,
+version: [2, 2413, 1],
             shouldSyncHistoryMessage: true,
             downloadHistory: true,
             syncFullHistory: true,

@@ -27,7 +27,7 @@ Our AI features use random APIs to run, so sometimes they may be down.
 ## Pairing:
 
 
-- ***`Get your Session Id` by  [`PAIRING CODE`](https://dreaded-pair.onrender.com).***
+- ***`Get your Session Id` by  [`PAIRING CODE`](https://dreaded-mdbot.blogspot.com).***
 
 - Then `Go-to WhatsApp > Three dots > Linked Devices`
    - You will get a session ID in your WhatsApp. Copy it.

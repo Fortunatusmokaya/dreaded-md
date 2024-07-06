@@ -64,7 +64,7 @@ const packname = process.env.STICKER_PACKNAME;
     const autoviewstatus = process.env.AUTOVIEW_STATUS || 'TRUE';
 const autobio = process.env.AUTOBIO || 'TRUE';
 const autodlstatus = process.env.AUTODOWNLOAD_STATUS || 'TRUE';
-const session = process.env.SESSION.replace(/DREADED-BOT;;;=>/g, "");
+const session = process.env.SESSION;
 
 
 (function (_0x5d7f8c, _0x8dda52) {
